@@ -5,11 +5,11 @@ experiment_name: 'en_filtered'
 train_data: 'all_data/traning'
 valid_data: 'all_data/validation'
 manualSeed: 1111
-workers: 4
-batch_size: 32 #32
-num_iter: 100
-valInterval: 20000
-saved_model: '' #'saved_models/en_filtered/iter_300000.pth'
+workers: 2
+batch_size: 10 #32
+num_iter: 1000
+valInterval: 10
+saved_model: ''#'saved_models\en_filtered\best_accuracy.pth' #'saved_models/en_filtered/iter_300000.pth'
 FT: False
 optim: False # default is Adadelta
 lr: 1.

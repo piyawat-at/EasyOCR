@@ -6,10 +6,10 @@ experiment_name: en_filtered
 train_data: all_data/traning
 valid_data: all_data/validation
 manualSeed: 1111
-workers: 4
-batch_size: 32
-num_iter: 100
-valInterval: 20000
+workers: 2
+batch_size: 10
+num_iter: 1000
+valInterval: 10
 saved_model: 
 FT: False
 optim: False
