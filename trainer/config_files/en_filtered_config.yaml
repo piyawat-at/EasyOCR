@@ -2,12 +2,12 @@ number: '0123456789'
 symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
 lang_char: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 experiment_name: 'en_filtered'
-train_data: 'all_data'
-valid_data: 'all_data/en_val'
+train_data: 'all_data/traning'
+valid_data: 'all_data/validation'
 manualSeed: 1111
-workers: 6
+workers: 4
 batch_size: 32 #32
-num_iter: 300000
+num_iter: 100
 valInterval: 20000
 saved_model: '' #'saved_models/en_filtered/iter_300000.pth'
 FT: False
@@ -18,7 +18,7 @@ rho: 0.95
 eps: 0.00000001
 grad_clip: 5
 #Data processing
-select_data: 'en_train_filtered' # this is dataset folder in train_data
+select_data: '' # this is dataset folder in train_data
 batch_ratio: '1' 
 total_data_usage_ratio: 1.0
 batch_max_length: 34 
