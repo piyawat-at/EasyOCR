@@ -1,9 +1,0 @@
-[10/1000] Train loss: 12.35283, Valid loss: 5.22833, Elapsed_time: 28.54511
-Current_accuracy : 0.000, Current_norm_ED  : 0.0000
-Best_accuracy    : 0.000, Best_norm_ED     : 0.0000
---------------------------------------------------------------------------------
-Ground Truth              | Prediction                | Confidence Score & T/F
---------------------------------------------------------------------------------
-displacing @ GWEN #Discipline |                           | 0.0609	False
-Pfefferman Tor            |                           | 0.0880	False
---------------------------------------------------------------------------------

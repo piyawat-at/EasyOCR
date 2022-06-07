@@ -2,6 +2,7 @@ import os
 import sys
 import time
 import random
+os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 import torch
 import torch.backends.cudnn as cudnn
 import torch.nn as nn
@@ -162,6 +163,7 @@ def train(opt, show_number = 2, amp=False):
             start_iter = int(opt.saved_model.split('_')[-1].split('.')[0])
             print(f'continue to train, start_iter: {start_iter}')
         except:
+            print('can not load model to continue train')
             pass
 
     start_time = time.time()
@@ -272,7 +274,7 @@ def train(opt, show_number = 2, amp=False):
                 print('validation time: ', time.time()-t1)
                 t1=time.time()
         # save model per 1e+4 iter.
-        if (i + 1) % 1e+4 == 0:
+        if (i + 1) % 1e+3 == 0:
             torch.save(
                 model.state_dict(), f'./saved_models/{opt.experiment_name}/iter_{i+1}.pth')
 
