@@ -1,152 +1,17 @@
 --------------------------------------------------------------------------------
-dataset_root: all_data/traning
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/traning	 dataset: 
-sub-directory:	/training	 num samples: 437
-num total samples of : 437 x 1.0 (total_data_usage_ratio) = 437
-num samples of  per batch: 32 x 1.0 (batch_ratio) = 32
---------------------------------------------------------------------------------
-Total_batch_size: 32 = 32
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 57
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/traning
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/traning	 dataset: 
-sub-directory:	/training	 num samples: 437
-num total samples of : 437 x 1.0 (total_data_usage_ratio) = 437
-num samples of  per batch: 32 x 1.0 (batch_ratio) = 32
---------------------------------------------------------------------------------
-Total_batch_size: 32 = 32
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 57
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
 dataset_root: all_data/training
 opt.select_data: ['']
 opt.batch_ratio: ['1']
 --------------------------------------------------------------------------------
 dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
-num samples of  per batch: 32 x 1.0 (batch_ratio) = 32
---------------------------------------------------------------------------------
-Total_batch_size: 32 = 32
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
-num samples of  per batch: 32 x 1.0 (batch_ratio) = 32
---------------------------------------------------------------------------------
-Total_batch_size: 32 = 32
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
-num samples of  per batch: 32 x 1.0 (batch_ratio) = 32
---------------------------------------------------------------------------------
-Total_batch_size: 32 = 32
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
-num samples of  per batch: 32 x 1.0 (batch_ratio) = 32
---------------------------------------------------------------------------------
-Total_batch_size: 32 = 32
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
-num samples of  per batch: 32 x 1.0 (batch_ratio) = 32
---------------------------------------------------------------------------------
-Total_batch_size: 32 = 32
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
-num samples of  per batch: 32 x 1.0 (batch_ratio) = 32
---------------------------------------------------------------------------------
-Total_batch_size: 32 = 32
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
-num samples of  per batch: 32 x 1.0 (batch_ratio) = 32
---------------------------------------------------------------------------------
-Total_batch_size: 32 = 32
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
+sub-directory:	/training	 num samples: 1616
+num total samples of : 1616 x 1.0 (total_data_usage_ratio) = 1616
 num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
 --------------------------------------------------------------------------------
 Total_batch_size: 64 = 64
 --------------------------------------------------------------------------------
 dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
+sub-directory:	/validation	 num samples: 183
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 dataset_root: all_data/training
@@ -154,14 +19,14 @@ opt.select_data: ['']
 opt.batch_ratio: ['1']
 --------------------------------------------------------------------------------
 dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
+sub-directory:	/training	 num samples: 1616
+num total samples of : 1616 x 1.0 (total_data_usage_ratio) = 1616
 num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
 --------------------------------------------------------------------------------
 Total_batch_size: 64 = 64
 --------------------------------------------------------------------------------
 dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
+sub-directory:	/validation	 num samples: 183
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 dataset_root: all_data/training
@@ -169,14 +34,14 @@ opt.select_data: ['']
 opt.batch_ratio: ['1']
 --------------------------------------------------------------------------------
 dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
+sub-directory:	/training	 num samples: 1616
+num total samples of : 1616 x 1.0 (total_data_usage_ratio) = 1616
 num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
 --------------------------------------------------------------------------------
 Total_batch_size: 64 = 64
 --------------------------------------------------------------------------------
 dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
+sub-directory:	/validation	 num samples: 183
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 dataset_root: all_data/training
@@ -184,14 +49,26 @@ opt.select_data: ['']
 opt.batch_ratio: ['1']
 --------------------------------------------------------------------------------
 dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
+sub-directory:	/training	 num samples: 1616
+num total samples of : 1616 x 1.0 (total_data_usage_ratio) = 1616
+num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
+--------------------------------------------------------------------------------
+Total_batch_size: 64 = 64
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+dataset_root: all_data/training
+opt.select_data: ['']
+opt.batch_ratio: ['1']
+--------------------------------------------------------------------------------
+dataset_root:    all_data/training	 dataset: 
+sub-directory:	/training	 num samples: 1616
+num total samples of : 1616 x 1.0 (total_data_usage_ratio) = 1616
 num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
 --------------------------------------------------------------------------------
 Total_batch_size: 64 = 64
 --------------------------------------------------------------------------------
 dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
+sub-directory:	/validation	 num samples: 183
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 dataset_root: all_data/training
@@ -199,14 +76,14 @@ opt.select_data: ['']
 opt.batch_ratio: ['1']
 --------------------------------------------------------------------------------
 dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
+sub-directory:	/training	 num samples: 1616
+num total samples of : 1616 x 1.0 (total_data_usage_ratio) = 1616
 num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
 --------------------------------------------------------------------------------
 Total_batch_size: 64 = 64
 --------------------------------------------------------------------------------
 dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
+sub-directory:	/validation	 num samples: 183
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 dataset_root: all_data/training
@@ -214,14 +91,14 @@ opt.select_data: ['']
 opt.batch_ratio: ['1']
 --------------------------------------------------------------------------------
 dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
+sub-directory:	/training	 num samples: 1616
+num total samples of : 1616 x 1.0 (total_data_usage_ratio) = 1616
 num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
 --------------------------------------------------------------------------------
 Total_batch_size: 64 = 64
 --------------------------------------------------------------------------------
 dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
+sub-directory:	/validation	 num samples: 183
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 dataset_root: all_data/training
@@ -229,14 +106,14 @@ opt.select_data: ['']
 opt.batch_ratio: ['1']
 --------------------------------------------------------------------------------
 dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
+sub-directory:	/training	 num samples: 1616
+num total samples of : 1616 x 1.0 (total_data_usage_ratio) = 1616
 num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
 --------------------------------------------------------------------------------
 Total_batch_size: 64 = 64
 --------------------------------------------------------------------------------
 dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
+sub-directory:	/validation	 num samples: 183
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 dataset_root: all_data/training
@@ -244,14 +121,14 @@ opt.select_data: ['']
 opt.batch_ratio: ['1']
 --------------------------------------------------------------------------------
 dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
+sub-directory:	/training	 num samples: 1616
+num total samples of : 1616 x 1.0 (total_data_usage_ratio) = 1616
 num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
 --------------------------------------------------------------------------------
 Total_batch_size: 64 = 64
 --------------------------------------------------------------------------------
 dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
+sub-directory:	/validation	 num samples: 183
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 dataset_root: all_data/training
@@ -259,14 +136,14 @@ opt.select_data: ['']
 opt.batch_ratio: ['1']
 --------------------------------------------------------------------------------
 dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
+sub-directory:	/training	 num samples: 1616
+num total samples of : 1616 x 1.0 (total_data_usage_ratio) = 1616
 num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
 --------------------------------------------------------------------------------
 Total_batch_size: 64 = 64
 --------------------------------------------------------------------------------
 dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
+sub-directory:	/validation	 num samples: 183
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 dataset_root: all_data/training
@@ -274,14 +151,14 @@ opt.select_data: ['']
 opt.batch_ratio: ['1']
 --------------------------------------------------------------------------------
 dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
+sub-directory:	/training	 num samples: 1616
+num total samples of : 1616 x 1.0 (total_data_usage_ratio) = 1616
 num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
 --------------------------------------------------------------------------------
 Total_batch_size: 64 = 64
 --------------------------------------------------------------------------------
 dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
+sub-directory:	/validation	 num samples: 183
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 dataset_root: all_data/training
@@ -289,14 +166,14 @@ opt.select_data: ['']
 opt.batch_ratio: ['1']
 --------------------------------------------------------------------------------
 dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
+sub-directory:	/training	 num samples: 1616
+num total samples of : 1616 x 1.0 (total_data_usage_ratio) = 1616
 num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
 --------------------------------------------------------------------------------
 Total_batch_size: 64 = 64
 --------------------------------------------------------------------------------
 dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
+sub-directory:	/validation	 num samples: 183
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 dataset_root: all_data/training
@@ -304,14 +181,14 @@ opt.select_data: ['']
 opt.batch_ratio: ['1']
 --------------------------------------------------------------------------------
 dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
+sub-directory:	/training	 num samples: 1616
+num total samples of : 1616 x 1.0 (total_data_usage_ratio) = 1616
 num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
 --------------------------------------------------------------------------------
 Total_batch_size: 64 = 64
 --------------------------------------------------------------------------------
 dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
+sub-directory:	/validation	 num samples: 183
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 dataset_root: all_data/training
@@ -319,14 +196,14 @@ opt.select_data: ['']
 opt.batch_ratio: ['1']
 --------------------------------------------------------------------------------
 dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
+sub-directory:	/training	 num samples: 1616
+num total samples of : 1616 x 1.0 (total_data_usage_ratio) = 1616
 num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
 --------------------------------------------------------------------------------
 Total_batch_size: 64 = 64
 --------------------------------------------------------------------------------
 dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
+sub-directory:	/validation	 num samples: 183
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 dataset_root: all_data/training
@@ -334,14 +211,14 @@ opt.select_data: ['']
 opt.batch_ratio: ['1']
 --------------------------------------------------------------------------------
 dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
+sub-directory:	/training	 num samples: 1616
+num total samples of : 1616 x 1.0 (total_data_usage_ratio) = 1616
 num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
 --------------------------------------------------------------------------------
 Total_batch_size: 64 = 64
 --------------------------------------------------------------------------------
 dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
+sub-directory:	/validation	 num samples: 183
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 dataset_root: all_data/training
@@ -349,14 +226,14 @@ opt.select_data: ['']
 opt.batch_ratio: ['1']
 --------------------------------------------------------------------------------
 dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
+sub-directory:	/training	 num samples: 1616
+num total samples of : 1616 x 1.0 (total_data_usage_ratio) = 1616
 num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
 --------------------------------------------------------------------------------
 Total_batch_size: 64 = 64
 --------------------------------------------------------------------------------
 dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
+sub-directory:	/validation	 num samples: 183
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
 dataset_root: all_data/training
@@ -364,552 +241,12 @@ opt.select_data: ['']
 opt.batch_ratio: ['1']
 --------------------------------------------------------------------------------
 dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
+sub-directory:	/training	 num samples: 1616
+num total samples of : 1616 x 1.0 (total_data_usage_ratio) = 1616
 num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
 --------------------------------------------------------------------------------
 Total_batch_size: 64 = 64
 --------------------------------------------------------------------------------
 dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 418
-num total samples of : 418 x 1.0 (total_data_usage_ratio) = 418
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 60
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 32 x 1.0 (batch_ratio) = 32
---------------------------------------------------------------------------------
-Total_batch_size: 32 = 32
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 32 x 1.0 (batch_ratio) = 32
---------------------------------------------------------------------------------
-Total_batch_size: 32 = 32
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 32 x 1.0 (batch_ratio) = 32
---------------------------------------------------------------------------------
-Total_batch_size: 32 = 32
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 32 x 1.0 (batch_ratio) = 32
---------------------------------------------------------------------------------
-Total_batch_size: 32 = 32
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 8 x 1.0 (batch_ratio) = 8
---------------------------------------------------------------------------------
-Total_batch_size: 8 = 8
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 8 x 1.0 (batch_ratio) = 8
---------------------------------------------------------------------------------
-Total_batch_size: 8 = 8
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 16 x 1.0 (batch_ratio) = 16
---------------------------------------------------------------------------------
-Total_batch_size: 16 = 16
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 16 x 1.0 (batch_ratio) = 16
---------------------------------------------------------------------------------
-Total_batch_size: 16 = 16
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 16 x 1.0 (batch_ratio) = 16
---------------------------------------------------------------------------------
-Total_batch_size: 16 = 16
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 16 x 1.0 (batch_ratio) = 16
---------------------------------------------------------------------------------
-Total_batch_size: 16 = 16
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 32 x 1.0 (batch_ratio) = 32
---------------------------------------------------------------------------------
-Total_batch_size: 32 = 32
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 32 x 1.0 (batch_ratio) = 32
---------------------------------------------------------------------------------
-Total_batch_size: 32 = 32
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 32 x 1.0 (batch_ratio) = 32
---------------------------------------------------------------------------------
-Total_batch_size: 32 = 32
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 32 x 1.0 (batch_ratio) = 32
---------------------------------------------------------------------------------
-Total_batch_size: 32 = 32
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
---------------------------------------------------------------------------------
---------------------------------------------------------------------------------
-dataset_root: all_data/training
-opt.select_data: ['']
-opt.batch_ratio: ['1']
---------------------------------------------------------------------------------
-dataset_root:    all_data/training	 dataset: 
-sub-directory:	/training	 num samples: 1536
-num total samples of : 1536 x 1.0 (total_data_usage_ratio) = 1536
-num samples of  per batch: 64 x 1.0 (batch_ratio) = 64
---------------------------------------------------------------------------------
-Total_batch_size: 64 = 64
---------------------------------------------------------------------------------
-dataset_root:    all_data/validation	 dataset: /
-sub-directory:	/validation	 num samples: 263
+sub-directory:	/validation	 num samples: 183
 --------------------------------------------------------------------------------

@@ -5,12 +5,12 @@ import shutil
 import numpy as np
 import glob
 import pandas as pd 
-
+from tqdm import tqdm
 
 
 def split_data(folder_name, fileNames,label):
     data_csv = np.array([['filename', 'words']])
-    for fileName in fileNames:
+    for fileName in tqdm(fileNames):
         shutil.copy(fileName,os.path.join('trainer','all_data',folder_name,folder_name))
         file_name = fileName.split('\\')[-1]
         x = np.where(label == file_name)
@@ -26,7 +26,7 @@ def split_data(folder_name, fileNames,label):
 raw_data_path = os.path.join('raw_data','train_images')
 list_file = glob.glob(os.path.join(raw_data_path,'*.jpg'))
 
-ratio = [0.85, 0.15]
+ratio = [0.90, 0.10]
 classes = ['training','validation']
 
 
@@ -59,6 +59,6 @@ split_data('validation',validation_fileNames,label)
 
 
 
-test = os.path.join('trainer','all_data')
+# test = os.path.join('trainer','all_data')
 
-print(os.listdir(test))
+# print(os.listdir(test))

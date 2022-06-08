@@ -118,7 +118,7 @@ def hierarchical_dataset(root, opt, select_data='/'):
     """ select_data='/' contains all sub-directory of root directory """
     dataset_list = []
     dataset_log = f'dataset_root:    {root}\t dataset: {select_data[0]}'
-    print(dataset_log)
+    print(f'dataset_log {dataset_log}')
     dataset_log += '\n'
     for dirpath, dirnames, filenames in os.walk(root+'/'):
         if not dirnames:
@@ -134,6 +134,7 @@ def hierarchical_dataset(root, opt, select_data='/'):
                 print(sub_dataset_log)
                 dataset_log += f'{sub_dataset_log}\n'
                 dataset_list.append(dataset)
+
 
     concatenated_dataset = ConcatDataset(dataset_list)
 

@@ -38,11 +38,13 @@ def train(opt, show_number = 2, amp=False):
 
     opt.select_data = opt.select_data.split('-')
     opt.batch_ratio = opt.batch_ratio.split('-')
+    
     train_dataset = Batch_Balanced_Dataset(opt)
-
+    
     log = open(f'./saved_models/{opt.experiment_name}/log_dataset.txt', 'a', encoding="utf8")
     AlignCollate_valid = AlignCollate(imgH=opt.imgH, imgW=opt.imgW, keep_ratio_with_pad=opt.PAD, contrast_adjust=opt.contrast_adjust)
     valid_dataset, valid_dataset_log = hierarchical_dataset(root=opt.valid_data, opt=opt)
+
     valid_loader = torch.utils.data.DataLoader(
         valid_dataset, batch_size=min(32, opt.batch_size),
         shuffle=True,  # 'True' to check training progress with validation function.
@@ -274,7 +276,7 @@ def train(opt, show_number = 2, amp=False):
                 print('validation time: ', time.time()-t1)
                 t1=time.time()
         # save model per 1e+4 iter.
-        if (i + 1) % 1e+2 == 0:
+        if (i + 1) % 500 == 0:
             torch.save(
                 model.state_dict(), f'./saved_models/{opt.experiment_name}/iter_{i+1}.pth')
 
