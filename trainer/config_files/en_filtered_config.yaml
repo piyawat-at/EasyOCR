@@ -7,7 +7,7 @@ valid_data: 'all_data/validation'
 manualSeed: 1111
 workers: 4
 batch_size: 64 #32
-num_iter: 1000
+num_iter: 2000
 valInterval: 10
 saved_model: 'saved_models\trdg_model\best_accuracy.pth' #'saved_models\en_filtered\best_accuracy.pth' #'saved_models/en_filtered/iter_300000.pth'
 FT: False
