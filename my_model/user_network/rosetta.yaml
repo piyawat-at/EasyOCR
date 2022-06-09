@@ -10,4 +10,8 @@ character_list: >
           0123456789abcdefghijklmnopqrstuvwxyz
           ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^
           *+,-./:;<=>?@[\\]_`’~
-          กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿  
+          กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙ ฿
+Transformation: 'None'
+FeatureExtraction: 'ResNet'
+SequenceModeling: 'None'
+Prediction: 'CTC'
