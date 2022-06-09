@@ -3,15 +3,8 @@ from modules.transformation import TPS_SpatialTransformerNetwork
 from modules.feature_extraction import VGG_FeatureExtractor, RCNN_FeatureExtractor, ResNet_FeatureExtractor
 from modules.sequence_modeling import BidirectionalLSTM
 from modules.prediction import Attention
-
 import yaml
 import os
-# import importlib.util
-# import sys
-# spec = importlib.util.spec_from_file_location("feature_extraction", "trainer\modules\\feature_extraction.py")
-# feature_ex = importlib.util.module_from_spec(spec)
-# spec.loader.exec_module(feature_ex)
-
 
 class AttrDict(dict):
     def __init__(self, *args, **kwargs):
@@ -24,18 +17,15 @@ def get_config(file_path):
     opt = AttrDict(opt)
 
     return opt
-#     { 'Transformer': opt.Transformation,
-#             'FeatureExtraction': opt.FeatureExtraction,
-#             'SequenceModeling': opt.SequenceModeling,
-#             'Prediction': opt.Prediction,
-# }
-
 
 class Model(nn.Module):
     
     def __init__(self, input_channel, output_channel, hidden_size, num_class):
         super(Model, self).__init__()
-        path = os.path.join('my_model', 'user_network', 'rosetta.yaml')
+        cur_file_name = os.path.basename(__file__).split('/')[-1].split('.')[0]
+        # print(f'Model: {cur_file_name}')
+        path = os.path.join('my_model', 'user_network', cur_file_name+'.yaml')
+        print(path)
         opt = get_config(path)
         self.opt = opt
         self.stages = {'Trans': opt.Transformation, 'Feat': opt.FeatureExtraction,
