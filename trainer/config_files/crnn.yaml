@@ -1,15 +1,17 @@
-number: '0123456789๑๒๓๔๕๖๗๘๙'
-symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
-lang_char: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzกขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮเฯไใๅๆ็่้๊๋์'
-experiment_name: 'trdg_model'
+lang_char: >
+          0123456789abcdefghijklmnopqrstuvwxyz
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^
+          *+,-./:;<=>?@[\\]_`’~
+          กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
+experiment_name: 'crnn_model'
 train_data: 'all_data/training'
 valid_data: 'all_data/validation'
 manualSeed: 1111
 workers: 4
 batch_size: 64 #32
-num_iter: 2000
+num_iter: 830
 valInterval: 10
-saved_model: '' #'saved_models\en_filtered\best_accuracy.pth' #'saved_models/en_filtered/iter_300000.pth'
+saved_model: 'saved_models\crnn_model\best_accuracy.pth' #'saved_models\en_filtered\best_accuracy.pth' #'saved_models/en_filtered/iter_300000.pth'
 FT: False
 optim: False # default is Adadelta
 lr: 1.

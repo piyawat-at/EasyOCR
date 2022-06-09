@@ -1,0 +1,368 @@
+------------ Options -------------
+lang_char: 0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^ *+,-./:;<=>?@[\\]_`’~ กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
+
+experiment_name: rosetta_model
+train_data: all_data/training
+valid_data: all_data/validation
+manualSeed: 1111
+workers: 4
+batch_size: 64
+num_iter: 2000
+valInterval: 10
+saved_model: 
+FT: False
+optim: False
+lr: 1.0
+beta1: 0.9
+rho: 0.95
+eps: 1e-08
+grad_clip: 5
+select_data: ['']
+batch_ratio: ['1']
+total_data_usage_ratio: 1.0
+batch_max_length: 34
+imgH: 64
+imgW: 600
+rgb: False
+contrast_adjust: 0.0
+sensitive: True
+PAD: True
+data_filtering_off: False
+Transformation: None
+FeatureExtraction: ResNet
+SequenceModeling: None
+Prediction: CTC
+num_fiducial: 20
+input_channel: 1
+output_channel: 256
+hidden_size: 256
+decode: greedy
+new_prediction: False
+freeze_FeatureFxtraction: False
+freeze_SequenceModeling: False
+character: 0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^ *+,-./:;<=>?@[\\]_`’~ กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
+
+num_class: 187
+---------------------------------------
+------------ Options -------------
+lang_char: 0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^ *+,-./:;<=>?@[\\]_`’~ กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
+
+experiment_name: rosetta_model
+train_data: all_data/training
+valid_data: all_data/validation
+manualSeed: 1111
+workers: 4
+batch_size: 64
+num_iter: 2000
+valInterval: 10
+saved_model: 
+FT: False
+optim: False
+lr: 1.0
+beta1: 0.9
+rho: 0.95
+eps: 1e-08
+grad_clip: 5
+select_data: ['']
+batch_ratio: ['1']
+total_data_usage_ratio: 1.0
+batch_max_length: 34
+imgH: 64
+imgW: 600
+rgb: False
+contrast_adjust: 0.0
+sensitive: True
+PAD: True
+data_filtering_off: False
+Transformation: None
+FeatureExtraction: ResNet
+SequenceModeling: None
+Prediction: CTC
+num_fiducial: 20
+input_channel: 1
+output_channel: 256
+hidden_size: 256
+decode: greedy
+new_prediction: False
+freeze_FeatureFxtraction: False
+freeze_SequenceModeling: False
+character: 0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^ *+,-./:;<=>?@[\\]_`’~ กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
+
+num_class: 187
+---------------------------------------
+------------ Options -------------
+lang_char: 0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^ *+,-./:;<=>?@[\\]_`’~ กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
+
+experiment_name: rosetta_model
+train_data: all_data/training
+valid_data: all_data/validation
+manualSeed: 1111
+workers: 2
+batch_size: 64
+num_iter: 2000
+valInterval: 10
+saved_model: 
+FT: False
+optim: False
+lr: 1.0
+beta1: 0.9
+rho: 0.95
+eps: 1e-08
+grad_clip: 5
+select_data: ['']
+batch_ratio: ['1']
+total_data_usage_ratio: 1.0
+batch_max_length: 34
+imgH: 64
+imgW: 600
+rgb: False
+contrast_adjust: 0.0
+sensitive: True
+PAD: True
+data_filtering_off: False
+Transformation: None
+FeatureExtraction: ResNet
+SequenceModeling: None
+Prediction: CTC
+num_fiducial: 20
+input_channel: 1
+output_channel: 256
+hidden_size: 256
+decode: greedy
+new_prediction: False
+freeze_FeatureFxtraction: False
+freeze_SequenceModeling: False
+character: 0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^ *+,-./:;<=>?@[\\]_`’~ กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
+
+num_class: 187
+---------------------------------------
+------------ Options -------------
+lang_char: 0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^ *+,-./:;<=>?@[\\]_`’~ กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
+
+experiment_name: rosetta_model
+train_data: all_data/training
+valid_data: all_data/validation
+manualSeed: 1111
+workers: 2
+batch_size: 64
+num_iter: 2000
+valInterval: 10
+saved_model: 
+FT: False
+optim: False
+lr: 1.0
+beta1: 0.9
+rho: 0.95
+eps: 1e-08
+grad_clip: 5
+select_data: ['']
+batch_ratio: ['1']
+total_data_usage_ratio: 1.0
+batch_max_length: 34
+imgH: 64
+imgW: 600
+rgb: False
+contrast_adjust: 0.0
+sensitive: True
+PAD: True
+data_filtering_off: False
+Transformation: None
+FeatureExtraction: ResNet
+SequenceModeling: None
+Prediction: CTC
+num_fiducial: 20
+input_channel: 1
+output_channel: 256
+hidden_size: 256
+decode: greedy
+new_prediction: False
+freeze_FeatureFxtraction: False
+freeze_SequenceModeling: False
+character: 0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^ *+,-./:;<=>?@[\\]_`’~ กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
+
+num_class: 187
+---------------------------------------
+------------ Options -------------
+lang_char: 0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^ *+,-./:;<=>?@[\\]_`’~ กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
+
+experiment_name: rosetta_model
+train_data: all_data/training
+valid_data: all_data/validation
+manualSeed: 1111
+workers: 4
+batch_size: 32
+num_iter: 2000
+valInterval: 10
+saved_model: 
+FT: False
+optim: False
+lr: 1.0
+beta1: 0.9
+rho: 0.95
+eps: 1e-08
+grad_clip: 5
+select_data: ['']
+batch_ratio: ['1']
+total_data_usage_ratio: 1.0
+batch_max_length: 34
+imgH: 64
+imgW: 600
+rgb: False
+contrast_adjust: 0.0
+sensitive: True
+PAD: True
+data_filtering_off: False
+Transformation: None
+FeatureExtraction: ResNet
+SequenceModeling: None
+Prediction: CTC
+num_fiducial: 20
+input_channel: 1
+output_channel: 256
+hidden_size: 256
+decode: greedy
+new_prediction: False
+freeze_FeatureFxtraction: False
+freeze_SequenceModeling: False
+character: 0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^ *+,-./:;<=>?@[\\]_`’~ กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
+
+num_class: 187
+---------------------------------------
+------------ Options -------------
+lang_char: 0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^ *+,-./:;<=>?@[\\]_`’~ กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
+
+experiment_name: rosetta_model
+train_data: all_data/training
+valid_data: all_data/validation
+manualSeed: 1111
+workers: 4
+batch_size: 16
+num_iter: 2000
+valInterval: 10
+saved_model: 
+FT: False
+optim: False
+lr: 1.0
+beta1: 0.9
+rho: 0.95
+eps: 1e-08
+grad_clip: 5
+select_data: ['']
+batch_ratio: ['1']
+total_data_usage_ratio: 1.0
+batch_max_length: 34
+imgH: 64
+imgW: 600
+rgb: False
+contrast_adjust: 0.0
+sensitive: True
+PAD: True
+data_filtering_off: False
+Transformation: None
+FeatureExtraction: ResNet
+SequenceModeling: None
+Prediction: CTC
+num_fiducial: 20
+input_channel: 1
+output_channel: 256
+hidden_size: 256
+decode: greedy
+new_prediction: False
+freeze_FeatureFxtraction: False
+freeze_SequenceModeling: False
+character: 0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^ *+,-./:;<=>?@[\\]_`’~ กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
+
+num_class: 187
+---------------------------------------
+------------ Options -------------
+lang_char: 0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^ *+,-./:;<=>?@[\\]_`’~ กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
+
+experiment_name: rosetta_model
+train_data: all_data/training
+valid_data: all_data/validation
+manualSeed: 1111
+workers: 4
+batch_size: 16
+num_iter: 2000
+valInterval: 10
+saved_model: 
+FT: False
+optim: False
+lr: 1.0
+beta1: 0.9
+rho: 0.95
+eps: 1e-08
+grad_clip: 5
+select_data: ['']
+batch_ratio: ['1']
+total_data_usage_ratio: 1.0
+batch_max_length: 34
+imgH: 64
+imgW: 600
+rgb: False
+contrast_adjust: 0.0
+sensitive: True
+PAD: True
+data_filtering_off: False
+Transformation: None
+FeatureExtraction: ResNet
+SequenceModeling: None
+Prediction: CTC
+num_fiducial: 20
+input_channel: 1
+output_channel: 256
+hidden_size: 256
+decode: greedy
+new_prediction: False
+freeze_FeatureFxtraction: False
+freeze_SequenceModeling: False
+character: 0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^ *+,-./:;<=>?@[\\]_`’~ กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
+
+num_class: 187
+---------------------------------------
+------------ Options -------------
+lang_char: 0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^ *+,-./:;<=>?@[\\]_`’~ กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
+
+experiment_name: rosetta_model
+train_data: all_data/training
+valid_data: all_data/validation
+manualSeed: 1111
+workers: 4
+batch_size: 16
+num_iter: 2000
+valInterval: 10
+saved_model: 
+FT: False
+optim: False
+lr: 1.0
+beta1: 0.9
+rho: 0.95
+eps: 1e-08
+grad_clip: 5
+select_data: ['']
+batch_ratio: ['1']
+total_data_usage_ratio: 1.0
+batch_max_length: 34
+imgH: 64
+imgW: 600
+rgb: False
+contrast_adjust: 0.0
+sensitive: True
+PAD: True
+data_filtering_off: False
+Transformation: None
+FeatureExtraction: ResNet
+SequenceModeling: None
+Prediction: CTC
+num_fiducial: 20
+input_channel: 1
+output_channel: 256
+hidden_size: 256
+decode: greedy
+new_prediction: False
+freeze_FeatureFxtraction: False
+freeze_SequenceModeling: False
+character: 0123456789abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^ *+,-./:;<=>?@[\\]_`’~ กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
+
+num_class: 187
+---------------------------------------

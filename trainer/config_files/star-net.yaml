@@ -1,7 +1,7 @@
 number: '0123456789๑๒๓๔๕๖๗๘๙'
 symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
 lang_char: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzกขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮเฯไใๅๆ็่้๊๋์'
-experiment_name: 'trdg_model'
+experiment_name: 'star_net_model'
 train_data: 'all_data/training'
 valid_data: 'all_data/validation'
 manualSeed: 1111
@@ -29,7 +29,7 @@ contrast_adjust: False
 sensitive: True
 PAD: True
 contrast_adjust: 0.0
-data_filtering_off: False
+data_filtering_off: True
 # Model Architecture
 Transformation: 'None'
 FeatureExtraction: 'VGG'
