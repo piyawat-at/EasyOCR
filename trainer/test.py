@@ -21,7 +21,6 @@ def validation(model, criterion, evaluation_loader, converter, opt, device):
     length_of_data = 0
     infer_time = 0
     valid_loss_avg = Averager()
-
     for i, (image_tensors, labels) in enumerate(evaluation_loader):
         batch_size = image_tensors.size(0)
         length_of_data = length_of_data + batch_size
