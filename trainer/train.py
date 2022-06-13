@@ -44,6 +44,7 @@ def train(opt, show_number = 2, amp=False):
     train_dataset = Batch_Balanced_Dataset(opt)
     
     log = open(f'./saved_models/{opt.experiment_name}/log_dataset.txt', 'a', encoding="utf8")
+
     AlignCollate_valid = AlignCollate(imgH=opt.imgH, imgW=opt.imgW, keep_ratio_with_pad=opt.PAD, contrast_adjust=opt.contrast_adjust)
     valid_dataset, valid_dataset_log = hierarchical_dataset(root=opt.valid_data, opt=opt)
 
@@ -177,8 +178,9 @@ def train(opt, show_number = 2, amp=False):
 
     scaler = GradScaler()
     t1= time.time()
-        
-    for i in tqdm(range(start_iter, opt.num_iter)):
+
+    pbar = tqdm(total=opt.num_iter)
+    for i in range(start_iter, opt.num_iter):
         # train part
         optimizer.zero_grad(set_to_none=True)
         #print(f'\niter: {i}')
@@ -225,8 +227,12 @@ def train(opt, show_number = 2, amp=False):
             torch.nn.utils.clip_grad_norm_(model.parameters(), opt.grad_clip) 
             optimizer.step()
         loss_avg.add(cost)
-        print(f'Train loss: {loss_avg.val():0.5f}')
-        loss_avg.reset()
+        if ((i+1) % 10 == 0 or (i + 1) == opt.num_iter):
+            pbar.set_description(f'loss: {loss_avg.val():.3f}')
+            with open(f'./saved_models/{opt.experiment_name}/log_loss_train.txt', 'a', encoding="utf8") as log:
+                log.write(f'iter: {i+1} loss{loss_avg.val():.3f} {time.time()-t1}\n')
+            #pbar.write(f'[{i+1:>4}/{opt.num_iter:>4}] Loss: {loss_avg.val():.4f} ,end != '\n'')
+            loss_avg.reset()
 
         # validation part
         if ((i+1) % opt.valInterval == 0) and (i!=0):
@@ -242,8 +248,8 @@ def train(opt, show_number = 2, amp=False):
                 model.train()
 
                 # training loss and validation loss
-                loss_log = f'[{(i+1)}/{opt.num_iter}] Train loss: {loss_avg.val():0.5f}, Valid loss: {valid_loss:0.5f}, Elapsed_time: {elapsed_time:0.5f}'
-                loss_avg.reset()
+                loss_log = f'[{(i+1)}/{opt.num_iter}] Valid loss: {valid_loss:0.5f}, Elapsed_time: {elapsed_time:0.5f}'
+                #loss_avg.reset()
 
                 current_model_log = f'{"Current_accuracy":17s}: {current_accuracy:0.3f}, {"Current_norm_ED":17s}: {current_norm_ED:0.4f}'
 
@@ -289,4 +295,5 @@ def train(opt, show_number = 2, amp=False):
                 model.state_dict(), f'./saved_models/{opt.experiment_name}/{opt.experiment_name}.pth')
             print('end the training')
             sys.exit()
+        pbar.update(1)
         i += 1
