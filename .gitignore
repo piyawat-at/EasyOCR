@@ -112,3 +112,5 @@ ENV/
 *.jpg
 *.txt
 *.jpg
+*.csv
+*.rar

@@ -1,4 +1,5 @@
 import os
+from pprint import pprint
 import sys
 import time
 import random
@@ -106,8 +107,8 @@ def train(opt, show_number = 2, amp=False):
         model = torch.nn.DataParallel(model).to(device)
     
     model.train() 
-    print("Model:")
-    print(model)
+    # print("Model:")
+    # print(model)
     count_parameters(model)
     
     """ setup loss """
@@ -179,7 +180,7 @@ def train(opt, show_number = 2, amp=False):
     while(True):
         # train part
         optimizer.zero_grad(set_to_none=True)
-        
+        print(f'\niter: {i}')
         if amp:
             with autocast():
                 image_tensors, labels = train_dataset.get_batch()
@@ -233,8 +234,10 @@ def train(opt, show_number = 2, amp=False):
             with open(f'./saved_models/{opt.experiment_name}/log_train.txt', 'a', encoding="utf8") as log:
                 model.eval()
                 with torch.no_grad():
+                    print('validation...')
                     valid_loss, current_accuracy, current_norm_ED, preds, confidence_score, labels,\
                     infer_time, length_of_data = validation(model, criterion, valid_loader, converter, opt, device)
+                    print('after validation...')
                 model.train()
 
                 # training loss and validation loss
@@ -281,6 +284,8 @@ def train(opt, show_number = 2, amp=False):
                 model.state_dict(), f'./saved_models/{opt.experiment_name}/iter_{i+1}.pth')
 
         if i == opt.num_iter:
+            torch.save(
+                model.state_dict(), f'./saved_models/{opt.experiment_name}/iter_{i+1}_end.pth')
             print('end the training')
             sys.exit()
         i += 1

@@ -1,20 +1,21 @@
 lang_char: >
           0123456789abcdefghijklmnopqrstuvwxyz
-          ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^
-          *+,-./:;<=>?@[\\]_`’~
-          กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
-experiment_name: 'crnn_model'
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()
+          *+,-./:;<=>?@[\]^_`|~
+          กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮฯะัาำิีึืุูเแโใไ
+          ๅๆ็่้๊๋์ํ๐๑๒๓๔๕๖๗๘๙–‘ ’
+experiment_name: 'crnn_30k_model'
 train_data: 'all_data/training'
 valid_data: 'all_data/validation'
 manualSeed: 1111
 workers: 4
 batch_size: 64 #32
 num_iter: 2000
-valInterval: 10
-saved_model: '' #'saved_models\en_filtered\best_accuracy.pth' #'saved_models/en_filtered/iter_300000.pth'
+valInterval: 500
+saved_model: '' #'saved_models\crnn_30k_model\best_norm_ED.pth' #'saved_models\crnn_30k_model\best_accuracy.pth' 
 FT: False
 optim: False # default is Adadelta
-lr: 1.
+lr: 1. # default is 0.0001
 beta1: 0.9
 rho: 0.95
 eps: 0.00000001

@@ -1,17 +1,18 @@
 lang_char: >
           0123456789abcdefghijklmnopqrstuvwxyz
-          ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^
-          *+,-./:;<=>?@[\\]_`’~
-          กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙฿ 
-experiment_name: 'crnn_model'
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()
+          *+,-./:;<=>?@[\]^_`|~
+          กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮฯะัาำิีึืุูเแโใไ
+          ๅๆ็่้๊๋์ํ๐๑๒๓๔๕๖๗๘๙–‘ ’
+experiment_name: 'star_net_30k'
 train_data: 'all_data/training'
 valid_data: 'all_data/validation'
 manualSeed: 1111
 workers: 4
-batch_size: 64 #32
-num_iter: 2000
-valInterval: 10
-saved_model: '' #'saved_models\en_filtered\best_accuracy.pth' #'saved_models/en_filtered/iter_300000.pth'
+batch_size: 16 #32
+num_iter: 500
+valInterval: 50
+saved_model: 'saved_models\star_net_30k\best_norm_ED.pth' #'saved_models\en_filtered\best_accuracy.pth' #'saved_models/en_filtered/iter_300000.pth'
 FT: False
 optim: False # default is Adadelta
 lr: 1.
@@ -33,8 +34,8 @@ PAD: True
 contrast_adjust: 0.0
 data_filtering_off: False
 # Model Architecture
-Transformation: 'None'
-FeatureExtraction: 'VGG'
+Transformation: 'TPS'
+FeatureExtraction: 'ResNet'
 SequenceModeling: 'BiLSTM'
 Prediction: 'CTC'
 num_fiducial: 20
