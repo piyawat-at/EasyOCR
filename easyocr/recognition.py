@@ -162,8 +162,9 @@ def get_recognizer(recog_network, network_params, character,\
     elif recog_network == 'generation2':
         model_pkg = importlib.import_module("easyocr.model.vgg_model")
     else:
-        model_pkg = importlib.import_module(recog_network)
-    model = model_pkg.Model(num_class=num_class, **network_params)
+        model_pkg = importlib.import_module('train_module')
+        print(f'train_module loaded')
+    model = model_pkg.Model(recog_network, num_class=num_class, **network_params)
 
     if device == 'cpu':
         state_dict = torch.load(model_path, map_location=device)

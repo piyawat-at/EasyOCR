@@ -3,9 +3,9 @@
 from .detection import get_detector, get_textbox
 from .recognition import get_recognizer, get_text
 from .utils import group_text_box, get_image_list, calculate_md5, get_paragraph,\
-                   download_and_unzip, printProgressBar, diff, reformat_input,\
-                   make_rotated_img_list, set_result_with_confidence,\
-                   reformat_input_batched
+                download_and_unzip, printProgressBar, diff, reformat_input,\
+                make_rotated_img_list, set_result_with_confidence,\
+                reformat_input_batched
 from .config import *
 from bidi.algorithm import get_display
 import numpy as np

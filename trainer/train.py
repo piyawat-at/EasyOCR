@@ -1,4 +1,5 @@
 import os
+from pprint import pprint
 import sys
 import time
 import random
@@ -11,6 +12,7 @@ import torch.optim as optim
 import torch.utils.data
 from torch.cuda.amp import autocast, GradScaler
 import numpy as np
+from tqdm import tqdm
 
 from utils import CTCLabelConverter, AttnLabelConverter, Averager
 from dataset import hierarchical_dataset, AlignCollate, Batch_Balanced_Dataset
@@ -66,8 +68,8 @@ def train(opt, show_number = 2, amp=False):
         opt.input_channel = 3
     model = Model(opt)
     print('model input parameters', opt.imgH, opt.imgW, opt.num_fiducial, opt.input_channel, opt.output_channel,
-          opt.hidden_size, opt.num_class, opt.batch_max_length, opt.Transformation, opt.FeatureExtraction,
-          opt.SequenceModeling, opt.Prediction)
+        opt.hidden_size, opt.num_class, opt.batch_max_length, opt.Transformation, opt.FeatureExtraction,
+        opt.SequenceModeling, opt.Prediction)
 
     if opt.saved_model != '':
         pretrained_dict = torch.load(opt.saved_model)
@@ -106,8 +108,8 @@ def train(opt, show_number = 2, amp=False):
         model = torch.nn.DataParallel(model).to(device)
     
     model.train() 
-    print("Model:")
-    print(model)
+    # print("Model:")
+    # print(model)
     count_parameters(model)
     
     """ setup loss """
@@ -176,10 +178,10 @@ def train(opt, show_number = 2, amp=False):
     scaler = GradScaler()
     t1= time.time()
         
-    while(True):
+    for i in tqdm(range(start_iter, opt.num_iter)):
         # train part
         optimizer.zero_grad(set_to_none=True)
-        
+        #print(f'\niter: {i}')
         if amp:
             with autocast():
                 image_tensors, labels = train_dataset.get_batch()
@@ -225,7 +227,7 @@ def train(opt, show_number = 2, amp=False):
         loss_avg.add(cost)
 
         # validation part
-        if (i % opt.valInterval == 0) and (i!=0):
+        if ((i+1) % opt.valInterval == 0) and (i!=0):
             print('training time: ', time.time()-t1)
             t1=time.time()
             elapsed_time = time.time() - start_time
@@ -238,7 +240,7 @@ def train(opt, show_number = 2, amp=False):
                 model.train()
 
                 # training loss and validation loss
-                loss_log = f'[{i}/{opt.num_iter}] Train loss: {loss_avg.val():0.5f}, Valid loss: {valid_loss:0.5f}, Elapsed_time: {elapsed_time:0.5f}'
+                loss_log = f'[{(i+1)}/{opt.num_iter}] Train loss: {loss_avg.val():0.5f}, Valid loss: {valid_loss:0.5f}, Elapsed_time: {elapsed_time:0.5f}'
                 loss_avg.reset()
 
                 current_model_log = f'{"Current_accuracy":17s}: {current_accuracy:0.3f}, {"Current_norm_ED":17s}: {current_norm_ED:0.4f}'
@@ -275,12 +277,14 @@ def train(opt, show_number = 2, amp=False):
                 log.write(predicted_result_log + '\n')
                 print('validation time: ', time.time()-t1)
                 t1=time.time()
-        # save model per 1e+4 iter.
+        # save model
         if (i + 1) % 500 == 0:
             torch.save(
                 model.state_dict(), f'./saved_models/{opt.experiment_name}/iter_{i+1}.pth')
 
-        if i == opt.num_iter:
+        if (i + 1) == opt.num_iter:
+            torch.save(
+                model.state_dict(), f'./saved_models/{opt.experiment_name}/{opt.experiment_name}.pth')
             print('end the training')
             sys.exit()
         i += 1

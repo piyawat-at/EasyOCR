@@ -110,3 +110,7 @@ ENV/
 *.pth
 *.jpg
 *.jpg
+*.txt
+*.jpg
+*.csv
+*.rar

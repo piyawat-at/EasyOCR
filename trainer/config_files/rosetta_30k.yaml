@@ -1,0 +1,48 @@
+lang_char: >
+          0123456789abcdefghijklmnopqrstuvwxyz
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()
+          *+,-./:;<=>?@[\]^_`|~
+          กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮฯะัาำิีึืุูเแโใไ
+          ๅๆ็่้๊๋์ํ๐๑๒๓๔๕๖๗๘๙–‘ ’
+experiment_name: 'rosetta_30k'
+train_data: 'all_data/training'
+valid_data: 'all_data/validation'
+manualSeed: 1111
+workers: 4
+batch_size: 32 #32
+num_iter: 500
+valInterval: 50
+saved_model: 'saved_models\rosetta_30k\best_accuracy.pth' #'saved_models\crnn_30k_model\best_norm_ED.pth' #'saved_models\crnn_30k_model\best_accuracy.pth' 
+FT: False
+optim: False # default is Adadelta
+lr: 1. # default is 0.0001
+beta1: 0.9
+rho: 0.95
+eps: 0.00000001
+grad_clip: 5
+#Data processing
+select_data: '' # this is dataset folder in train_data
+batch_ratio: '1' 
+total_data_usage_ratio: 1.0
+batch_max_length: 34 
+imgH: 64
+imgW: 600
+rgb: False
+contrast_adjust: False
+sensitive: True
+PAD: True
+contrast_adjust: 0.0
+data_filtering_off: False
+# Model Architecture
+Transformation: 'None'
+FeatureExtraction: 'ResNet'
+SequenceModeling: 'None'
+Prediction: 'CTC'
+num_fiducial: 20
+input_channel: 1
+output_channel: 256
+hidden_size: 256
+decode: 'greedy'
+new_prediction: False
+freeze_FeatureFxtraction: False
+freeze_SequenceModeling: False

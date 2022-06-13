@@ -10,7 +10,7 @@ class Model(nn.Module):
         super(Model, self).__init__()
         self.opt = opt
         self.stages = {'Trans': opt.Transformation, 'Feat': opt.FeatureExtraction,
-                       'Seq': opt.SequenceModeling, 'Pred': opt.Prediction}
+                    'Seq': opt.SequenceModeling, 'Pred': opt.Prediction}
 
         """ Transformation """
         if opt.Transformation == 'TPS':
