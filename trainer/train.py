@@ -225,6 +225,8 @@ def train(opt, show_number = 2, amp=False):
             torch.nn.utils.clip_grad_norm_(model.parameters(), opt.grad_clip) 
             optimizer.step()
         loss_avg.add(cost)
+        print(f'Train loss: {loss_avg.val():0.5f}')
+        loss_avg.reset()
 
         # validation part
         if ((i+1) % opt.valInterval == 0) and (i!=0):
