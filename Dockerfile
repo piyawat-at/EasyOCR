@@ -2,10 +2,9 @@ FROM pytorch/pytorch
 
 # if you forked EasyOCR, you can pass in your own GitHub username to use your fork
 # i.e. gh_username=myname
+ARG service_home="/home/EasyOCR"
 ARG gh_username=piyawat-at
 ARG gh_email=piyawat.anugool@gmail.com
-ARG service_home="/home/EasyOCR"
-
 # Configure apt and install packages
 RUN apt-get update -y && \
     apt-get install -y \
@@ -33,3 +32,5 @@ RUN mkdir "$service_home" \
 RUN cd "$service_home" \
     && python setup.py build_ext --inplace -j 4 \
     && python -m pip install -e .
+
+WORKDIR $service_home
