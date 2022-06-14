@@ -4,15 +4,15 @@ lang_char: >
           *+,-./:;<=>?@[\]^_`|~
           กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮฯะัาำิีึืุูเแโใไ
           ๅๆ็่้๊๋์ํ๐๑๒๓๔๕๖๗๘๙–‘ ’
-experiment_name: 'crnn_30k_2000_lr_15e-1'
+experiment_name: 'crnn_30k_8000-10000_lr_25e-2'
 train_data: 'all_data/training'
 valid_data: 'all_data/validation'
 manualSeed: 1111
 workers: 4
-batch_size: 64 #32
+batch_size: 32 #32
 num_iter: 2000
-valInterval: 500
-saved_model: 'saved_models\crnn_30k_2000_lr_15e-1\best_accuracy.pth' #'saved_models\crnn_30k_model\best_norm_ED.pth' #'saved_models\crnn_30k_model\best_accuracy.pth' 
+valInterval: 1000000
+saved_model: 'saved_models\crnn_30k_6000-8000_lr_25e-2\crnn_30k_6000-8000_lr_25e-2.pth' #'saved_models\crnn_30k_model\best_norm_ED.pth' #'saved_models\crnn_30k_model\best_accuracy.pth' 
 FT: False
 optim: False # default is Adadelta
 lr: 0.25 # default is 0.0001

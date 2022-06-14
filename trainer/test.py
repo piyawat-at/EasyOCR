@@ -2,6 +2,7 @@ import os
 import time
 import string
 import argparse
+from tqdm import tqdm
 
 import torch
 import torch.backends.cudnn as cudnn
@@ -21,7 +22,8 @@ def validation(model, criterion, evaluation_loader, converter, opt, device):
     length_of_data = 0
     infer_time = 0
     valid_loss_avg = Averager()
-    for i, (image_tensors, labels) in enumerate(evaluation_loader):
+    print('debug: validation()')
+    for i, (image_tensors, labels) in tqdm(enumerate(evaluation_loader)):
         batch_size = image_tensors.size(0)
         length_of_data = length_of_data + batch_size
         image = image_tensors.to(device)
@@ -69,7 +71,7 @@ def validation(model, criterion, evaluation_loader, converter, opt, device):
         preds_prob = F.softmax(preds, dim=2)
         preds_max_prob, _ = preds_prob.max(dim=2)
         confidence_score_list = []
-        
+        print('debug: inter loop')  
         for gt, pred, pred_max_prob in zip(labels, preds_str, preds_max_prob):
             if 'Attn' in opt.Prediction:
                 gt = gt[:gt.find('[s]')]
