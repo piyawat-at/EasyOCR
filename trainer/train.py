@@ -230,7 +230,7 @@ def train(opt, show_number = 2, amp=False):
         if ((i+1) % 10 == 0 or (i + 1) == opt.num_iter):
             pbar.set_description(f'loss: {loss_avg.val():.3f}')
             with open(f'./saved_models/{opt.experiment_name}/log_loss_train.txt', 'a', encoding="utf8") as log:
-                log.write(f'iter: {i+1} loss{loss_avg.val():.3f} {time.time()-t1}\n')
+                log.write(f'iter: {i+1} loss {loss_avg.val():.3f} {time.time()-t1}\n')
             #pbar.write(f'[{i+1:>4}/{opt.num_iter:>4}] Loss: {loss_avg.val():.4f} ,end != '\n'')
             loss_avg.reset()
 
