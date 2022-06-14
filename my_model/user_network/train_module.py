@@ -25,7 +25,8 @@ class Model(nn.Module):
         cur_file_name = os.path.basename(__file__).split('/')[-1].split('.')[0]
         # print(f'Model: {cur_file_name}')
         path = os.path.join('my_model', 'user_network', recog_network+'.yaml')
-        print(path)
+        print(f'config: {path}')
+        print('-'*20)
         opt = get_config(path)
         self.opt = opt
         self.stages = {'Trans': opt.Transformation, 'Feat': opt.FeatureExtraction,
