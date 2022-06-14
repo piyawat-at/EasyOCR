@@ -8,9 +8,10 @@ lang_list:
         - 'th'
 character_list: >
           0123456789abcdefghijklmnopqrstuvwxyz
-          ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^
-          *+,-./:;<=>?@[\\]_`’~
-          กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙ ฿
+          ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()
+          *+,-./:;<=>?@[\]^_`|~
+          กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮฯะัาำิีึืุูเแโใไ
+          ๅๆ็่้๊๋์ํ๐๑๒๓๔๕๖๗๘๙–‘ ’
 Transformation: 'None'
 FeatureExtraction: 'VGG'
 SequenceModeling: 'BiLSTM'

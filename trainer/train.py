@@ -178,12 +178,13 @@ def train(opt, show_number = 2, amp=False):
 
     scaler = GradScaler()
     t1= time.time()
-
+    with open(f'./saved_models/{opt.experiment_name}/log_loss_train.txt', 'a', encoding="utf8") as log:
+        log.write(f'experiment_name: {opt.experiment_name}\n')
     pbar = tqdm(total=opt.num_iter)
     for i in range(start_iter, opt.num_iter):
         # train part
         optimizer.zero_grad(set_to_none=True)
-        #print(f'\niter: {i}')
+
         if amp:
             with autocast():
                 image_tensors, labels = train_dataset.get_batch()
@@ -286,7 +287,7 @@ def train(opt, show_number = 2, amp=False):
                 print('validation time: ', time.time()-t1)
                 t1=time.time()
         # save model
-        if (i + 1) % 500 == 0:
+        if (i + 1) % 1000 == 0:
             torch.save(
                 model.state_dict(), f'./saved_models/{opt.experiment_name}/iter_{i+1}.pth')
 

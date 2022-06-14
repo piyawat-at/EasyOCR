@@ -32,7 +32,7 @@ class Reader(object):
     def __init__(self, lang_list, gpu=True, model_storage_directory=None,
                  user_network_directory=None, recog_network = 'standard',
                  download_enabled=True, detector=True, recognizer=True,
-                 verbose=True, quantize=True, cudnn_benchmark=False):
+                 verbose=True, quantize=True, cudnn_benchmark=False, config_path = None):
         """Create an EasyOCR Reader
 
         Parameters:
@@ -200,7 +200,7 @@ class Reader(object):
             self.setLanguageList(lang_list, model)
 
         else: # user-defined model
-            with open(os.path.join(self.user_network_directory, recog_network+ '.yaml'), encoding='utf8') as file:
+            with open(os.path.join(self.user_network_directory, config_path+ '.yaml'), encoding='utf8') as file:
                 recog_config = yaml.load(file, Loader=yaml.FullLoader)
             
             global imgH # if custom model, save this variable. (from *.yaml)
