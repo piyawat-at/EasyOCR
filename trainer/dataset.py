@@ -66,22 +66,23 @@ class Batch_Balanced_Dataset(object):
             dataset_split = [number_dataset, total_number_dataset - number_dataset]
             indices = range(total_number_dataset)
             _dataset, _ = [Subset(_dataset, indices[offset - length:offset])
-                           for offset, length in zip(_accumulate(dataset_split), dataset_split)]
+                        for offset, length in zip(_accumulate(dataset_split), dataset_split)]
             selected_d_log = f'num total samples of {selected_d}: {total_number_dataset} x {opt.total_data_usage_ratio} (total_data_usage_ratio) = {len(_dataset)}\n'
             selected_d_log += f'num samples of {selected_d} per batch: {opt.batch_size} x {float(batch_ratio_d)} (batch_ratio) = {_batch_size}'
             print(selected_d_log)
             log.write(selected_d_log + '\n')
             batch_size_list.append(str(_batch_size))
             Total_batch_size += _batch_size
-
+            
+           
             _data_loader = torch.utils.data.DataLoader(
                 _dataset, batch_size=_batch_size,
                 shuffle=True,
                 num_workers=int(opt.workers), #prefetch_factor=2,persistent_workers=True,
                 collate_fn=_AlignCollate, pin_memory=True)
+            
             self.data_loader_list.append(_data_loader)
             self.dataloader_iter_list.append(iter(_data_loader))
-
         Total_batch_size_log = f'{dashed_line}\n'
         batch_size_sum = '+'.join(batch_size_list)
         Total_batch_size_log += f'Total_batch_size: {batch_size_sum} = {Total_batch_size}\n'
