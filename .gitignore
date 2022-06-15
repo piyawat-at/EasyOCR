@@ -119,3 +119,4 @@ ENV/
 *.yaml
 trainer/all_data/testing/LMWN/dict_map_ocr.json
 trainer/config_files/crnn_30k.yaml
+*.png
