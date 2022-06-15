@@ -51,6 +51,8 @@ def count_matches(pred_texts, gt_texts):
     for pred_text, gt_text in zip(pred_texts, gt_texts):
         if gt_text == pred_text:
             match_res['match_word_num'] += 1
+        else: 
+            print(f'pred_text: {pred_text} gt_text: {gt_text}')
         gt_text_lower = gt_text.lower()
         pred_text_lower = pred_text.lower()
         if gt_text_lower == pred_text_lower:
@@ -139,4 +141,4 @@ def eval_ocr_metric(pred_texts, gt_texts, metric='acc'):
     return eval_res
 
 if __name__ == '__main__':
-    print(eval_ocr_metric(['a', 'b', 'c'], ['a', 'b', 'c']))
+    eval_ocr_metric(['a', 'b', 'c'], ['a', 'e', 'c'])
