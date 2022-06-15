@@ -174,13 +174,12 @@ def train(opt, show_number = 2, amp=False):
     start_time = time.time()
     best_accuracy = -1
     best_norm_ED = -1
-    i = start_iter
 
     scaler = GradScaler()
     t1= time.time()
     with open(f'./saved_models/{opt.experiment_name}/log_loss_train.txt', 'a', encoding="utf8") as log:
         log.write(f'experiment_name: {opt.experiment_name}\n')
-    pbar = tqdm(total=opt.num_iter)
+    pbar = tqdm(total=opt.num_iter-start_iter)
     for i in range(start_iter, opt.num_iter):
         # train part
         optimizer.zero_grad(set_to_none=True)
