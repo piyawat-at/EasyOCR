@@ -22,7 +22,6 @@ class Model(nn.Module):
     
     def __init__(self, recog_network ,input_channel, output_channel, hidden_size ,num_class):
         super(Model, self).__init__()
-        cur_file_name = os.path.basename(__file__).split('/')[-1].split('.')[0]
         # print(f'Model: {cur_file_name}')
         path = os.path.join('my_model', 'user_network', recog_network+'.yaml')
         print(f'config: {path}')

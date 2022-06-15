@@ -9,7 +9,7 @@ from collections import OrderedDict
 import importlib
 from .utils import CTCLabelConverter
 import math
-from sys import platform
+import re
 
 def custom_mean(x):
     return x.prod()**(2.0/np.sqrt(len(x)))
@@ -167,10 +167,11 @@ def get_recognizer(recog_network, network_params, character,\
 
     print('-'*20)
     print(f'model_path: {model_path}')
-    if platform == 'win32':
-        model = model_pkg.Model(recog_network=model_path.split('\\')[-2].split('_')[0], num_class=num_class, **network_params)
-    else: 
-        model = model_pkg.Model(recog_network=model_path.split('/')[-2].split('_')[0], num_class=num_class, **network_params)
+    model = model_pkg.Model(recog_network=re.split(r'[/\\_]',model_path)[3], num_class=num_class, **network_params)
+    # if platform == 'win32':
+    #     model = model_pkg.Model(recog_network=model_path.split('\\')[-2].split('_')[0], num_class=num_class, **network_params)
+    # else: 
+    #     model = model_pkg.Model(recog_network=model_path.split('/')[-2].split('_')[0], num_class=num_class, **network_params)
     
     if device == 'cpu':
         state_dict = torch.load(model_path, map_location=device)
