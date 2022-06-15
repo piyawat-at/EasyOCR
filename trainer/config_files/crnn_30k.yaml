@@ -4,7 +4,7 @@ lang_char: >
           *+,-./:;<=>?@[\]^_`|~
           กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮฯะัาำิีึืุูเแโใไ
           ๅๆ็่้๊๋์ํ๐๑๒๓๔๕๖๗๘๙–‘ ’
-experiment_name: 'crnn_30k_lr_25e-2'
+experiment_name: 'crnn_30k_lr_5e-2'
 train_data: 'all_data/training'
 valid_data: 'all_data/validation'
 manualSeed: 1111
@@ -15,7 +15,7 @@ valInterval: 1000000
 saved_model: '' #'saved_models\crnn_30k_model\best_norm_ED.pth' #'saved_models\crnn_30k_model\best_accuracy.pth' 
 FT: False
 optim: False # default is Adadelta
-lr: 0.25 # default is 0.0001
+lr: 0.5
 beta1: 0.9
 rho: 0.95
 eps: 0.00000001

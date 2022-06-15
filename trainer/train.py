@@ -143,8 +143,8 @@ def train(opt, show_number = 2, amp=False):
 
     # setup optimizer
     if opt.optim=='adam':
-        #optimizer = optim.Adam(filtered_parameters, lr=opt.lr, betas=(opt.beta1, 0.999))
-        optimizer = optim.Adam(filtered_parameters)
+        optimizer = optim.Adam(filtered_parameters, lr=opt.lr, betas=(opt.beta1, 0.999))
+        # optimizer = optim.Adam(filtered_parameters)
     else:
         optimizer = optim.Adadelta(filtered_parameters, lr=opt.lr, rho=opt.rho, eps=opt.eps)
     print("Optimizer:")
