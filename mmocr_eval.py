@@ -27,6 +27,8 @@ def cal_true_positive_char(pred, gt):
 
 
 def count_matches(pred_texts, gt_texts):
+    false_list = {
+    }
     """Count the various match number for metric calculation.
 
     Args:
@@ -52,7 +54,7 @@ def count_matches(pred_texts, gt_texts):
         if gt_text == pred_text:
             match_res['match_word_num'] += 1
         else: 
-            print(f'pred_text: {pred_text} gt_text: {gt_text}')
+            false_list[gt_text] = pred_text
         gt_text_lower = gt_text.lower()
         pred_text_lower = pred_text.lower()
         if gt_text_lower == pred_text_lower:
@@ -80,10 +82,11 @@ def count_matches(pred_texts, gt_texts):
     normalized_edit_distance = norm_ed_sum / max(1, len(gt_texts))
     match_res['ned'] = normalized_edit_distance
 
-    return match_res
+    return match_res, false_list
 
 
 def eval_ocr_metric(pred_texts, gt_texts, metric='acc'):
+
 
     assert isinstance(pred_texts, list)
     assert isinstance(gt_texts, list)
@@ -102,7 +105,7 @@ def eval_ocr_metric(pred_texts, gt_texts, metric='acc'):
     ])
     assert metric.issubset(supported_metrics)
 
-    match_res = count_matches(pred_texts, gt_texts)
+    match_res, false_list = count_matches(pred_texts, gt_texts)
     eps = 1e-8
     eval_res = {}
 
@@ -138,7 +141,7 @@ def eval_ocr_metric(pred_texts, gt_texts, metric='acc'):
     for key, value in eval_res.items():
         eval_res[key] = float('{:.4f}'.format(value))
 
-    return eval_res
+    return eval_res, false_list
 
 if __name__ == '__main__':
     eval_ocr_metric(['a', 'b', 'c'], ['a', 'e', 'c'])
