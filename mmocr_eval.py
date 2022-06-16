@@ -27,8 +27,8 @@ def cal_true_positive_char(pred, gt):
 
 
 def count_matches(pred_texts, gt_texts, name_img):
-    false_list = {
-    }
+    false_list = []
+
     """Count the various match number for metric calculation.
 
     Args:
@@ -52,7 +52,6 @@ def count_matches(pred_texts, gt_texts, name_img):
     norm_ed_sum = 0.0
     for pred_text, gt_text in zip(pred_texts, gt_texts):
         all_pread = pred_text
-        print(name_img[0], pred_text, len(pred_text))
         if len(pred_text) != 0:
             pred_text = pred_text[0]
         else :
@@ -61,9 +60,8 @@ def count_matches(pred_texts, gt_texts, name_img):
             match_res['match_word_num'] += 1
             name_img.pop(0)
         else:
-            txt = name_img.pop(0)
-            print(txt)
-            false_list[gt_text] = (txt, pred_text, len(all_pread))
+            name_img_txt = name_img.pop(0)
+            false_list.append([name_img_txt, all_pread, len(all_pread), gt_text])
 
         gt_text_lower = gt_text.lower()
         pred_text_lower = pred_text.lower()
