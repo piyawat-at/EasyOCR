@@ -1,18 +1,14 @@
 lang_char: >
-          0123456789abcdefghijklmnopqrstuvwxyz
-          ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()
-          *+,-./:;<=>?@[\]^_`|~
-          กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮฯะัาำิีึืุูเแโใไ
-          ๅๆ็่้๊๋์ํ๐๑๒๓๔๕๖๗๘๙–‘ ’
-experiment_name: 'crnn_30k_lr_25e-2'
+          0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-./:;<=>?@[\]^_`|~กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮฯะัาำิีึืุูเแโใไๅๆ็่้๊๋์ํ๐๑๒๓๔๕๖๗๘๙–‘ ’
+experiment_name: 'crnn_30k_lr_25e-2_test'
 train_data: 'all_data/training'
 valid_data: 'all_data/validation'
 manualSeed: 1111
 workers: 6
 batch_size: 32 #32
-num_iter: 25000
+num_iter: 1000
 valInterval: 1000000
-saved_model: 'saved_models/crnn_30k_lr_25e-2/iter_20000.pth' #'saved_models\crnn_30k_model\best_norm_ED.pth' #'saved_models\crnn_30k_model\best_accuracy.pth' 
+saved_model: '' #'saved_models\crnn_30k_model\best_norm_ED.pth' #'saved_models\crnn_30k_model\best_accuracy.pth' 
 FT: False
 optim: False # default is Adadelta
 lr: 0.5
@@ -32,7 +28,7 @@ contrast_adjust: False
 sensitive: True
 PAD: True
 contrast_adjust: 0.0
-data_filtering_off: False
+data_filtering_off: True
 # Model Architecture
 Transformation: 'None'
 FeatureExtraction: 'VGG'
