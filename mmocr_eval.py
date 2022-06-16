@@ -26,7 +26,7 @@ def cal_true_positive_char(pred, gt):
     return true_positive_char_num
 
 
-def count_matches(pred_texts, gt_texts):
+def count_matches(pred_texts, gt_texts, name_img):
     false_list = {
     }
     """Count the various match number for metric calculation.
@@ -51,10 +51,18 @@ def count_matches(pred_texts, gt_texts):
     comp = re.compile('[^A-Z^a-z^0-9^\u4e00-\u9fa5]')
     norm_ed_sum = 0.0
     for pred_text, gt_text in zip(pred_texts, gt_texts):
-        if gt_text == pred_text:
+        all_pread = pred_text
+        # print(name_img, pred_text, len(pred_text))
+        if len(pred_text) != 0:
+            pred_text = pred_text[0]
+        else :
+            pred_text = ''
+        if gt_text ==pred_text:
             match_res['match_word_num'] += 1
-        else: 
-            false_list[gt_text] = pred_text
+            name_img.pop(0)
+        else:
+            false_list[gt_text] = (name_img.pop(0), pred_text, len(all_pread))
+
         gt_text_lower = gt_text.lower()
         pred_text_lower = pred_text.lower()
         if gt_text_lower == pred_text_lower:
@@ -85,7 +93,7 @@ def count_matches(pred_texts, gt_texts):
     return match_res, false_list
 
 
-def eval_ocr_metric(pred_texts, gt_texts, metric='acc'):
+def eval_ocr_metric(pred_texts, gt_texts, name_img ,metric='acc'):
 
 
     assert isinstance(pred_texts, list)
@@ -105,7 +113,7 @@ def eval_ocr_metric(pred_texts, gt_texts, metric='acc'):
     ])
     assert metric.issubset(supported_metrics)
 
-    match_res, false_list = count_matches(pred_texts, gt_texts)
+    match_res, false_list = count_matches(pred_texts, gt_texts, name_img)
     eps = 1e-8
     eval_res = {}
 
@@ -144,4 +152,4 @@ def eval_ocr_metric(pred_texts, gt_texts, metric='acc'):
     return eval_res, false_list
 
 if __name__ == '__main__':
-    eval_ocr_metric(['a', 'b', 'c'], ['a', 'e', 'c'])
+    eval_ocr_metric([['a'], ['b','x'], ['c']], ['a', 'e', 'c'], ['1', '2', '3'])
