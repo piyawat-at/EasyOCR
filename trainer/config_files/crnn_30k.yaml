@@ -1,11 +1,11 @@
 lang_char: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-./:;<=>?@[\]^_`|~กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮฯะัาำิีึืุูเแโใไๅๆ็่้๊๋์ํ๐๑๒๓๔๕๖๗๘๙–‘ ’
-experiment_name: 'crnn_30k_lr_25e-2_test'
+experiment_name: 'crnn_30k_lr_5e-1'
 train_data: 'all_data/training'
 valid_data: 'all_data/validation'
 manualSeed: 1111
 workers: 6
 batch_size: 32 #32
-num_iter: 1000
+num_iter: 20000
 valInterval: 1000000
 saved_model: '' #'saved_models\crnn_30k_model\best_norm_ED.pth' #'saved_models\crnn_30k_model\best_accuracy.pth' 
 FT: False
@@ -27,7 +27,7 @@ contrast_adjust: False
 sensitive: True
 PAD: True
 contrast_adjust: 0.0
-data_filtering_off: True
+data_filtering_off: False
 # Model Architecture
 Transformation: 'None'
 FeatureExtraction: 'VGG'

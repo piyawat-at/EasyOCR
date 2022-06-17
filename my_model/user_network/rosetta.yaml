@@ -6,11 +6,7 @@ imgH: 64
 lang_list:
         - 'en'
         - 'th'
-character_list: >
-          0123456789abcdefghijklmnopqrstuvwxyz
-          ABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&\'()^
-          *+,-./:;<=>?@[\\]_`’~
-          กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮฤฦะัาำิีึืุูเแโใไๅํ็่้๊๋ฯฺๆ์๎๏๚๛๐๑๒๓๔๕๖๗๘๙ ฿
+character_list: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-./:;<=>?@[\]^_`|~กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรฤลฦวศษสหฬอฮฯะัาำิีึืุูเแโใไๅๆ็่้๊๋์ํ๐๑๒๓๔๕๖๗๘๙–‘ ’
 Transformation: 'None'
 FeatureExtraction: 'ResNet'
 SequenceModeling: 'None'
