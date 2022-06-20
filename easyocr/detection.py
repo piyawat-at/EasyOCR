@@ -45,6 +45,7 @@ def test_net(canvas_size, mag_ratio, net, image, text_threshold, link_threshold,
     with torch.no_grad():
         y, feature = net(x)
 
+
     boxes_list, polys_list = [], []
     for out in y:
         # make score and link map

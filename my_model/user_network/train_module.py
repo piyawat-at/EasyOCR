@@ -48,7 +48,7 @@ class Model(nn.Module):
         # else:
         #     raise Exception('No FeatureExtraction module specified')
         self.FeatureExtraction_output = output_channel  # int(imgH/16-1) * 512
-        self.AdaptiveAvgPool = nn.AdaptiveAvgPool2d((None, 1))  # Transform final (imgH/16-1) -> 1
+        self.AdaptiveAvgPool = nn.AdaptiveAvgPool2d((256, 1))  # Transform final (imgH/16-1) -> 1
 
         """ Sequence modeling"""
         print(f'SequenceModeling: {opt.SequenceModeling}')

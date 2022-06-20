@@ -122,3 +122,4 @@ trainer/config_files/crnn_30k.yaml
 trainer/config_files/crnn_30k.yaml
 *.png
 *.ttf
+*.onnx
