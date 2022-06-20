@@ -178,7 +178,7 @@ def train(opt, show_number = 2, amp=False):
     scaler = GradScaler()
     t1= time.time()
     with open(f'./saved_models/{opt.experiment_name}/log_loss_train.txt', 'a', encoding="utf8") as log:
-        log.write(f'experiment_name: {opt.experiment_name}\n')
+        log.write(f'experiment_name: {opt.experiment_name} batch_size: {opt.batch_size}\n')
     pbar = tqdm(total=opt.num_iter-start_iter)
     for i in range(start_iter, opt.num_iter):
         # train part
@@ -231,7 +231,7 @@ def train(opt, show_number = 2, amp=False):
         if ((i+1) % 10 == 0 or (i + 1) == opt.num_iter):
             pbar.set_description(f'loss: {loss_avg.val():.3f}')
             with open(f'./saved_models/{opt.experiment_name}/log_loss_train.txt', 'a', encoding="utf8") as log:
-                log.write(f'iter: {i+1} loss {loss_avg.val():.3f} {time.time()-t1}\n')
+                log.write(f'iter: {i+1} loss {loss_avg.val():.3f} {time.time()-t1} \n')
             loss_avg.reset()
 
         # validation part
