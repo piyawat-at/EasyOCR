@@ -153,7 +153,7 @@ def recognizer_predict(model, converter, test_loader, batch_max_length,\
                 torch.onnx.export(
                     model.module,
                     dummy_input,
-                    "recognitionModel.onnx",
+                    "rosetta_recognitionModel.onnx",
                     export_params=True,
                     opset_version=11,
                     input_names = ['input1','input2'],
