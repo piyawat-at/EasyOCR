@@ -114,8 +114,6 @@ def recognizer_predict(model, converter, test_loader, batch_max_length,\
             # For max length prediction
             length_for_pred = torch.IntTensor([batch_max_length] * batch_size).to(device)
             text_for_pred = torch.LongTensor(batch_size, batch_max_length + 1).fill_(0).to(device)
-
-
             using_onnx = False
 
             if not using_onnx:
@@ -123,14 +121,13 @@ def recognizer_predict(model, converter, test_loader, batch_max_length,\
                 start = time.time()
                 preds = model(image, text_for_pred)
                 end = time.time()
-                # print(f'time: {end - start}')
             else:
-                # print(f'time 1: {start}')
                 
                 ort_session = onnxruntime.InferenceSession("recognitionModel.onnx", providers=['CUDAExecutionProvider', 'TensorrtExecutionProvider'])
                 ort_session.set_providers(['CUDAExecutionProvider', 'TensorrtExecutionProvider'])
                 start = time.time()
                 ort_inputs = {ort_session.get_inputs()[0].name: to_numpy(image)}
+        
                 ort_outs = ort_session.run(None, ort_inputs)
                 # print(ort_session.get_providers())
                 # print(onnxruntime.get_device())
@@ -270,7 +267,6 @@ def get_text(character, imgH, imgW, recognizer, converter, image_list,\
     test_loader = torch.utils.data.DataLoader(
         test_data, batch_size=batch_size, shuffle=False,
         num_workers=int(workers), collate_fn=AlignCollate_normal, pin_memory=True)
-
     # predict first round
     result1 = recognizer_predict(recognizer, converter, test_loader,batch_max_length,\
                                 ignore_idx, char_group_idx, decoder, beamWidth, device = device)
