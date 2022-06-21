@@ -31,13 +31,13 @@ def test_net(canvas_size, mag_ratio, net, image, text_threshold, link_threshold,
     # resize
     for img in image_arrs:
         img_resized, target_ratio, size_heatmap = resize_aspect_ratio(img, canvas_size,
-                                                                      interpolation=cv2.INTER_LINEAR,
-                                                                      mag_ratio=mag_ratio)
+                                                                    interpolation=cv2.INTER_LINEAR,
+                                                                    mag_ratio=mag_ratio)
         img_resized_list.append(img_resized)
     ratio_h = ratio_w = 1 / target_ratio
     # preprocessing
     x = [np.transpose(normalizeMeanVariance(n_img), (2, 0, 1))
-         for n_img in img_resized_list]
+        for n_img in img_resized_list]
     x = torch.from_numpy(np.array(x))
     x = x.to(device)
 
@@ -94,12 +94,12 @@ def get_textbox(detector, image, canvas_size, mag_ratio, text_threshold, link_th
     result = []
     estimate_num_chars = optimal_num_chars is not None
     bboxes_list, polys_list = test_net(canvas_size, mag_ratio, detector,
-                                       image, text_threshold,
-                                       link_threshold, low_text, poly,
-                                       device, estimate_num_chars)
+                                        image, text_threshold,
+                                        link_threshold, low_text, poly,
+                                        device, estimate_num_chars)
     if estimate_num_chars:
         polys_list = [[p for p, _ in sorted(polys, key=lambda x: abs(optimal_num_chars - x[1]))]
-                      for polys in polys_list]
+                    for polys in polys_list]
 
     for polys in polys_list:
         single_img_result = []

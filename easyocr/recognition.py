@@ -12,6 +12,7 @@ import math
 import re
 import onnx
 import onnxruntime
+import time
 
 def to_numpy(tensor):
     return tensor.detach().cpu().numpy()if tensor.requires_grad else tensor.cpu().numpy()
@@ -115,19 +116,27 @@ def recognizer_predict(model, converter, test_loader, batch_max_length,\
             text_for_pred = torch.LongTensor(batch_size, batch_max_length + 1).fill_(0).to(device)
 
 
-            using_onnx = True
+            using_onnx = False
 
             if not using_onnx:
-                # normal 
+                # normal
+                start = time.time()
                 preds = model(image, text_for_pred)
+                end = time.time()
+                # print(f'time: {end - start}')
             else:
+                # print(f'time 1: {start}')
+                
                 ort_session = onnxruntime.InferenceSession("recognitionModel.onnx", providers=['CUDAExecutionProvider', 'TensorrtExecutionProvider'])
                 ort_session.set_providers(['CUDAExecutionProvider', 'TensorrtExecutionProvider'])
+                start = time.time()
                 ort_inputs = {ort_session.get_inputs()[0].name: to_numpy(image)}
                 ort_outs = ort_session.run(None, ort_inputs)
-                print(ort_session.get_providers())
-                print(onnxruntime.get_device())
+                # print(ort_session.get_providers())
+                # print(onnxruntime.get_device())
                 preds = torch.from_numpy(ort_outs[0])
+                end = time.time()
+                # print(f'time: {end - start}')
             
             # deployment
             is_deploy = False
@@ -204,8 +213,8 @@ def recognizer_predict(model, converter, test_loader, batch_max_length,\
     return result
 
 def get_recognizer(recog_network, network_params, character,\
-                   separator_list, dict_list, model_path,\
-                   device = 'cpu', quantize = True):
+                separator_list, dict_list, model_path,\
+                device = 'cpu', quantize = True):
 
     converter = CTCLabelConverter(character, separator_list, dict_list)
     num_class = len(converter.character)
@@ -244,8 +253,8 @@ def get_recognizer(recog_network, network_params, character,\
     return model, converter
 
 def get_text(character, imgH, imgW, recognizer, converter, image_list,\
-             ignore_char = '',decoder = 'greedy', beamWidth =5, batch_size=1, contrast_ths=0.1,\
-             adjust_contrast=0.5, filter_ths = 0.003, workers = 1, device = 'cpu'):
+            ignore_char = '',decoder = 'greedy', beamWidth =5, batch_size=1, contrast_ths=0.1,\
+            adjust_contrast=0.5, filter_ths = 0.003, workers = 1, device = 'cpu'):
     batch_max_length = int(imgW/10)
 
     char_group_idx = {}
@@ -264,7 +273,7 @@ def get_text(character, imgH, imgW, recognizer, converter, image_list,\
 
     # predict first round
     result1 = recognizer_predict(recognizer, converter, test_loader,batch_max_length,\
-                                 ignore_idx, char_group_idx, decoder, beamWidth, device = device)
+                                ignore_idx, char_group_idx, decoder, beamWidth, device = device)
 
     # predict second round
     low_confident_idx = [i for i,item in enumerate(result1) if (item[1] < contrast_ths)]
