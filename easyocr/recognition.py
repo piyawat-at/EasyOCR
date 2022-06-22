@@ -116,10 +116,9 @@ def recognizer_predict(model, converter, test_loader, batch_max_length,\
             length_for_pred = torch.IntTensor([batch_max_length] * batch_size).to(device)
             text_for_pred = torch.LongTensor(batch_size, batch_max_length + 1).fill_(0).to(device)
             preds = model(image, text_for_pred)
-
             # deployment
             if DEPLOYEMNT['is_deployment']:
-                model_name = 'crnn_recognitionModel.onnx'
+                model_name = 'rosetta_recognitionModel.onnx'
                 batch_size_1_1 = 500
                 in_shape_1=[1, 1, 64, batch_size_1_1]
                 dummy_input_1 = torch.rand(in_shape_1)
@@ -150,7 +149,6 @@ def recognizer_predict(model, converter, test_loader, batch_max_length,\
                     print('The model is invalid: %s' % e)
                 else:
                     print('The model is valid!')
-
             # Select max probabilty (greedy decoding) then decode index to character
             preds_size = torch.IntTensor([preds.size(1)] * batch_size)
 
@@ -161,7 +159,6 @@ def recognizer_predict(model, converter, test_loader, batch_max_length,\
             pred_norm = preds_prob.sum(axis=2)
             preds_prob = preds_prob/np.expand_dims(pred_norm, axis=-1)
             preds_prob = torch.from_numpy(preds_prob).float().to(device)
-
             if decoder == 'greedy':
                 # Select max probabilty (greedy decoding) then decode index to character
                 _, preds_index = preds_prob.max(2)
@@ -173,7 +170,6 @@ def recognizer_predict(model, converter, test_loader, batch_max_length,\
             elif decoder == 'wordbeamsearch':
                 k = preds_prob.cpu().detach().numpy()
                 preds_str = converter.decode_wordbeamsearch(k, beamWidth=beamWidth)
-
             preds_prob = preds_prob.cpu().detach().numpy()
             values = preds_prob.max(axis=2)
             indices = preds_prob.argmax(axis=2)
@@ -188,7 +184,6 @@ def recognizer_predict(model, converter, test_loader, batch_max_length,\
             for pred, pred_max_prob in zip(preds_str, preds_max_prob):
                 confidence_score = custom_mean(pred_max_prob)
                 result.append([pred, confidence_score])
-
     return result
 
 def get_recognizer(recog_network, network_params, character,\
