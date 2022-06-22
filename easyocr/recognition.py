@@ -11,8 +11,9 @@ from .utils import CTCLabelConverter
 import math
 import re
 import onnx
-import onnxruntime
-import time
+from icecream import ic
+from deployment_config import DEPLOYEMNT
+
 
 def to_numpy(tensor):
     return tensor.detach().cpu().numpy()if tensor.requires_grad else tensor.cpu().numpy()
@@ -114,30 +115,11 @@ def recognizer_predict(model, converter, test_loader, batch_max_length,\
             # For max length prediction
             length_for_pred = torch.IntTensor([batch_max_length] * batch_size).to(device)
             text_for_pred = torch.LongTensor(batch_size, batch_max_length + 1).fill_(0).to(device)
-            using_onnx = False
+            preds = model(image, text_for_pred)
 
-            if not using_onnx:
-                # normal
-                start = time.time()
-                preds = model(image, text_for_pred)
-                end = time.time()
-            else:
-                
-                ort_session = onnxruntime.InferenceSession("recognitionModel.onnx", providers=['CUDAExecutionProvider', 'TensorrtExecutionProvider'])
-                ort_session.set_providers(['CUDAExecutionProvider', 'TensorrtExecutionProvider'])
-                start = time.time()
-                ort_inputs = {ort_session.get_inputs()[0].name: to_numpy(image)}
-        
-                ort_outs = ort_session.run(None, ort_inputs)
-                # print(ort_session.get_providers())
-                # print(onnxruntime.get_device())
-                preds = torch.from_numpy(ort_outs[0])
-                end = time.time()
-                # print(f'time: {end - start}')
-            
             # deployment
-            is_deploy = False
-            if is_deploy:
+            if DEPLOYEMNT['is_deployment']:
+                model_name = 'crnn_recognitionModel.onnx'
                 batch_size_1_1 = 500
                 in_shape_1=[1, 1, 64, batch_size_1_1]
                 dummy_input_1 = torch.rand(in_shape_1)
@@ -149,19 +131,19 @@ def recognizer_predict(model, converter, test_loader, batch_max_length,\
                 dummy_input_2 = dummy_input_2.to(device)
 
                 dummy_input = (dummy_input_1, dummy_input_2)
-
                 torch.onnx.export(
                     model.module,
                     dummy_input,
-                    "rosetta_recognitionModel.onnx",
+                    model_name,
                     export_params=True,
                     opset_version=11,
                     input_names = ['input1','input2'],
                     output_names = ['output'],
-                    dynamic_axes={'input1' : {3 : 'batch_size_1_1'}},
+                    do_constant_folding=True,
+                    dynamic_axes={'input1' : {3 : 'batch_size_1_1'},'input2' : {1 : 'batch_size_2_1'}},
                 )
 
-                onnx_model = onnx.load("recognitionModel.onnx")
+                onnx_model = onnx.load(model_name)
                 try:
                     onnx.checker.check_model(onnx_model)
                 except onnx.checker.ValidationError as e:
