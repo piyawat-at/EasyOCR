@@ -195,14 +195,17 @@ def get_recognizer(recog_network, network_params, character,\
 
     if recog_network == 'generation1':
         model_pkg = importlib.import_module("easyocr.model.model")
+        model = model_pkg.Model(num_class=num_class, **network_params)
     elif recog_network == 'generation2':
         model_pkg = importlib.import_module("easyocr.model.vgg_model")
+        model = model_pkg.Model(num_class=num_class, **network_params)
     else:
         model_pkg = importlib.import_module('train_module')
+        model = model_pkg.Model(recog_network=re.split(r'[/\\_]',model_path)[3], num_class=num_class, **network_params)
 
     print('-'*20)
     print(f'model_path: {model_path}')
-    model = model_pkg.Model(recog_network=re.split(r'[/\\_]',model_path)[3], num_class=num_class, **network_params)
+    
     # if platform == 'win32':
     #     model = model_pkg.Model(recog_network=model_path.split('\\')[-2].split('_')[0], num_class=num_class, **network_params)
     # else: 

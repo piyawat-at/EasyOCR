@@ -48,24 +48,24 @@ def split_data(folder_name, fileNames,label):
 
 def prepare_data(image_path):
     # raw_data_path = os.path.join('raw_data','train_images_30k')
-    list_file = glob.glob(os.path.join(image_path,'*.jpg'))
+    # list_file = glob.glob(os.path.join(image_path,'*.jpg'))
 
-    ratio = [0.90, 0.10]
-    classes = ['training','validation']
-    print()
-    for cls in classes:
-        if not os.path.exists(os.path.join(os.getcwd(),'all_data',cls,cls)):
-            os.mkdir(os.path.join(os.getcwd(),'all_data',cls,cls))
-        else:
-            if(input('The directory already exists, do you want to delete it?(y/n)') == 'y'):
-                shutil.rmtree(os.path.join(os.getcwd(),'all_data',cls,cls))
-                os.mkdir(os.path.join(os.getcwd(),'all_data',cls,cls))
-            else:exit()
+    # ratio = [0.90, 0.10]
+    # classes = ['training','validation']
+    # print()
+    # for cls in classes:
+    #     if not os.path.exists(os.path.join(os.getcwd(),'all_data',cls,cls)):
+    #         os.mkdir(os.path.join(os.getcwd(),'all_data',cls,cls))
+    #     else:
+    #         if(input('The directory already exists, do you want to delete it?(y/n)') == 'y'):
+    #             shutil.rmtree(os.path.join(os.getcwd(),'all_data',cls,cls))
+    #             os.mkdir(os.path.join(os.getcwd(),'all_data',cls,cls))
+    #         else:exit()
 
-    np.random.shuffle(list_file)
-    training_fileNames = list_file[:int(len(list_file)*ratio[0])]
-    validation_fileNames = list_file[int(len(list_file)*ratio[0]):]
-    # testing_fileNames = list_file[int(len(list_file)*(1-ratio[2])):]
+    # np.random.shuffle(list_file)
+    # training_fileNames = list_file[:int(len(list_file)*ratio[0])]
+    # validation_fileNames = list_file[int(len(list_file)*ratio[0]):]
+    # # testing_fileNames = list_file[int(len(list_file)*(1-ratio[2])):]
 
     label_path = os.path.join(image_path,'label.txt')
 
