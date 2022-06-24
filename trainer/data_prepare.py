@@ -78,3 +78,16 @@ def prepare_data(image_path):
 
     split_data('training',training_fileNames,label_list)
     split_data('validation',validation_fileNames,label_list)
+
+def create_csv(path):
+    label_path = os.path.join(path,'label.txt')
+    label_list = []
+    with open(label_path, encoding='utf8') as file:
+        lines = file.readlines()
+        for line in tqdm(lines):
+            d = eval(line)
+            label_list.append(d)
+
+    df = pd.DataFrame(label_list)
+    # csv.to_csv(os.path.join(raw_data_path,folder_name,'labels.csv'),index=None,header=None)
+    df.to_csv(os.path.join(path,'labels.csv'),index=None, header=['filename', 'words'])
