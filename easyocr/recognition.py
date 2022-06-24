@@ -118,7 +118,7 @@ def recognizer_predict(model, converter, test_loader, batch_max_length,\
             preds = model(image, text_for_pred)
             # deployment
             if DEPLOYEMNT['is_deployment']:
-                model_name = 'rosetta_recognitionModel.onnx'
+                model_name = f'{model.module.name}_recognitionModel.onnx'
                 batch_size_1_1 = 500
                 in_shape_1=[1, 1, 64, batch_size_1_1]
                 dummy_input_1 = torch.rand(in_shape_1)

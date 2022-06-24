@@ -5,6 +5,7 @@ from modules.sequence_modeling import BidirectionalLSTM
 from modules.prediction import Attention
 import yaml
 import os
+from icecream import ic
 
 class AttrDict(dict):
     def __init__(self, *args, **kwargs):
@@ -28,6 +29,7 @@ class Model(nn.Module):
         print('-'*20)
         opt = get_config(path)
         self.opt = opt
+        self.name = recog_network
         self.stages = {'Trans': opt.Transformation, 'Feat': opt.FeatureExtraction,
                     'Seq': opt.SequenceModeling, 'Pred': opt.Prediction}
 
