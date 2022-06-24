@@ -1,5 +1,5 @@
 DEPLOYEMNT = {
-    'is_deployment': False,
+    'is_deployment': True,
 }
 
 
