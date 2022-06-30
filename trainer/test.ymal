@@ -1,0 +1,52 @@
+&id001 !!python/object/new:utils.AttrDict
+dictitems:
+  FT: false
+  FeatureExtraction: ResNet
+  PAD: true
+  Prediction: CTC
+  SequenceModeling: None
+  Transformation: None
+  batch_max_length: 100000
+  batch_ratio: 1-1-1
+  batch_size: 12
+  beta1: 0.9
+  character: " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\xD7\
+    \xE0\xE1\xE9\u0104\u0E01\u0E02\u0E03\u0E04\u0E05\u0E06\u0E07\u0E08\u0E09\u0E0A\
+    \u0E0B\u0E0C\u0E0D\u0E0E\u0E0F\u0E10\u0E11\u0E12\u0E13\u0E14\u0E15\u0E16\u0E17\
+    \u0E18\u0E19\u0E1A\u0E1B\u0E1C\u0E1D\u0E1E\u0E1F\u0E20\u0E21\u0E22\u0E23\u0E24\
+    \u0E25\u0E26\u0E27\u0E28\u0E29\u0E2A\u0E2B\u0E2C\u0E2D\u0E2E\u0E2F\u0E30\u0E31\
+    \u0E32\u0E33\u0E34\u0E35\u0E36\u0E37\u0E38\u0E39\u0E3A\u0E3F\u0E40\u0E41\u0E42\
+    \u0E43\u0E44\u0E45\u0E46\u0E47\u0E48\u0E49\u0E4A\u0E4B\u0E4C\u0E4D\u0E50\u0E51\
+    \u0E52\u0E53\u0E54\u0E55\u0E56\u0E57\u0E58\u0E59\u2013\u2014\u2018\u2019\u201C\
+    \u201D\u2022\u2026\u2713\uFEFF"
+  contrast_adjust: 0.0
+  data_filtering_off: false
+  decode: greedy
+  eps: 1.0e-08
+  experiment_name: rosetta_hippo_300k_v1
+  freeze_FeatureFxtraction: false
+  freeze_SequenceModeling: false
+  grad_clip: 5
+  hidden_size: 256
+  imgH: 64
+  imgW: 600
+  input_channel: 1
+  lang_char: None
+  lr: 0.25
+  manualSeed: 1111
+  new_prediction: false
+  num_fiducial: 20
+  num_iter: 30000
+  optim: false
+  output_channel: 256
+  rgb: false
+  rho: 0.95
+  saved_model: saved_models/rosetta_hippo_300k_v1/iter_18000.pth
+  select_data: color-white-google_ocr_train_images
+  sensitive: true
+  total_data_usage_ratio: 1.0
+  train_data: all_data/hippo_300k_v1
+  valInterval: 1000000
+  valid_data: all_data/validation
+  workers: 6
+state: *id001
