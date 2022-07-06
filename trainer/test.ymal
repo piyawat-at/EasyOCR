@@ -1,14 +1,14 @@
 &id001 !!python/object/new:utils.AttrDict
 dictitems:
   FT: false
-  FeatureExtraction: ResNet
+  FeatureExtraction: VGG
   PAD: true
   Prediction: CTC
-  SequenceModeling: None
+  SequenceModeling: BiLSTM
   Transformation: None
   batch_max_length: 100000
   batch_ratio: 1-1-1
-  batch_size: 10
+  batch_size: 8
   beta1: 0.9
   character: " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz|~\xD7\
     \xE0\xE1\xE9\u0104\u0E01\u0E02\u0E03\u0E04\u0E05\u0E06\u0E07\u0E08\u0E09\u0E0A\
@@ -23,7 +23,7 @@ dictitems:
   data_filtering_off: false
   decode: greedy
   eps: 1.0e-08
-  experiment_name: rosetta_hippo_1M
+  experiment_name: crnn_hippo_1M
   freeze_FeatureFxtraction: false
   freeze_SequenceModeling: false
   grad_clip: 5
@@ -36,17 +36,17 @@ dictitems:
   manualSeed: 1111
   new_prediction: false
   num_fiducial: 20
-  num_iter: 40000
+  num_iter: 100000
   optim: false
   output_channel: 256
   rgb: false
   rho: 0.95
-  saved_model: saved_models/rosetta_hippo_1M/iter_22000.pth
+  saved_model: saved_models/crnn_hippo_1M/iter_80000.pth
   select_data: 700k_w_VQOS-300k_r_Y92B-google_ocr_train_images
   sensitive: true
   total_data_usage_ratio: 1.0
   train_data: all_data/hippo
   valInterval: 1000000
   valid_data: all_data/validation
-  workers: 4
+  workers: 6
 state: *id001
