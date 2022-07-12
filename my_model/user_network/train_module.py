@@ -23,7 +23,6 @@ class Model(nn.Module):
     
     def __init__(self, recog_network ,input_channel, output_channel, hidden_size ,num_class):
         super(Model, self).__init__()
-        # print(f'Model: {cur_file_name}')
         path = os.path.join('my_model', 'user_network', recog_network+'.yaml')
         print(f'config: {path}')
         print('-'*20)
