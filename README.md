@@ -69,7 +69,7 @@ pip install easyocr
 For the latest development release:
 
 ``` bash
-pip install git+git://github.com/jaidedai/easyocr.git
+pip install git+https://github.com/JaidedAI/EasyOCR.git
 ```
 
 Note 1: For Windows, please install torch and torchvision first by following the official instructions here https://pytorch.org. On the pytorch website, be sure to select the right CUDA version you have. If you intend to run on CPU mode only, select `CUDA = None`.
@@ -200,4 +200,4 @@ Due to limited resources, an issue older than 6 months will be automatically clo
 
 ## Business Inquiries
 
-For Enterprise Support, [Jaided AI](https://www.jaided.ai/) offers full service for custom OCR/AI systems from building, to maintenance and deployment. Click [here](https://www.jaided.ai/contactus) to contact us.
+For Enterprise Support, [Jaided AI](https://www.jaided.ai/) offers full service for custom OCR/AI systems from implementation, training/finetuning and deployment. Click [here](https://www.jaided.ai/contactus?ref=github) to contact us.
