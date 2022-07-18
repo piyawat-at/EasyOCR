@@ -124,3 +124,4 @@ trainer/config_files/crnn_30k.yaml
 *.ttf
 *.onnx
 *.json
+*.icloud
