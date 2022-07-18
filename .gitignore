@@ -110,3 +110,6 @@ ENV/
 *.jpg
 *.csv
 *.txt
+*.icloud
+*.pth
+*.yaml
