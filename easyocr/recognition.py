@@ -9,6 +9,7 @@ from collections import OrderedDict
 import importlib
 from .utils import CTCLabelConverter
 import math
+from deployment_config import DEPLOYEMNT
 
 def custom_mean(x):
     return x.prod()**(2.0/np.sqrt(len(x)))
@@ -97,7 +98,7 @@ class AlignCollate(object):
         return image_tensors
 
 def recognizer_predict(model, converter, test_loader, batch_max_length,\
-                       ignore_idx, char_group_idx, decoder = 'greedy', beamWidth= 5, device = 'cpu'):
+                    ignore_idx, char_group_idx, decoder = 'greedy', beamWidth= 5, device = 'cpu'):
     model.eval()
     result = []
     with torch.no_grad():
@@ -107,9 +108,41 @@ def recognizer_predict(model, converter, test_loader, batch_max_length,\
             # For max length prediction
             length_for_pred = torch.IntTensor([batch_max_length] * batch_size).to(device)
             text_for_pred = torch.LongTensor(batch_size, batch_max_length + 1).fill_(0).to(device)
-
             preds = model(image, text_for_pred)
+            print(vars(model))
+            if DEPLOYEMNT['is_deployment']:
+                
+                model_name = f'{model.get_name()}_recognitionModel.onnx'
+                batch_size_1_1 = 500
+                in_shape_1=[1, 1, 64, batch_size_1_1]
+                dummy_input_1 = torch.rand(in_shape_1)
+                dummy_input_1 = dummy_input_1.to(device)
 
+                batch_size_2_1 = 50
+                in_shape_2=[1, batch_size_2_1]
+                dummy_input_2 = torch.rand(in_shape_2)
+                dummy_input_2 = dummy_input_2.to(device)
+
+                dummy_input = (dummy_input_1, dummy_input_2)
+                torch.onnx.export(
+                    model.module,
+                    dummy_input,
+                    model_name,
+                    export_params=True,
+                    opset_version=11,
+                    input_names = ['input1','input2'],
+                    output_names = ['output'],
+                    do_constant_folding=True,
+                    dynamic_axes={'input1' : {3 : 'batch_size_1_1'},'input2' : {1 : 'batch_size_2_1'}},
+                )
+
+                onnx_model = onnx.load(model_name)
+                try:
+                    onnx.checker.check_model(onnx_model)
+                except onnx.checker.ValidationError as e:
+                    print('The model is invalid: %s' % e)
+                else:
+                    print('The model is valid!')
             # Select max probabilty (greedy decoding) then decode index to character
             preds_size = torch.IntTensor([preds.size(1)] * batch_size)
 
