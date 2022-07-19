@@ -22,8 +22,6 @@ RUN apt-get update -y && \
 # Clone EasyOCR repo
 RUN mkdir "$service_home" \
     && git clone "https://github.com/$gh_username/EasyOCR.git" "$service_home" \
-    # && git config --global user.email $gh_email \
-    # && git config --global user.name $gh_username \
     && cd "$service_home" \
     && git remote add upstream "https://github.com/JaidedAI/EasyOCR.git" \
     && git pull upstream master
