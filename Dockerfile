@@ -4,7 +4,6 @@ FROM pytorch/pytorch:1.12.0-cuda11.3-cudnn8-devel
 # i.e. gh_username=myname
 ARG service_home="/home/EasyOCR"
 ARG gh_username=piyawat-at
-# ARG gh_email=piyawat.anugool@gmail.com
 # Configure apt and install packages
 RUN apt-get update -y && \
     apt-get install -y \
@@ -28,12 +27,12 @@ RUN mkdir "$service_home" \
     && cd "$service_home" \
     && git remote add upstream "https://github.com/JaidedAI/EasyOCR.git" \
     && git pull upstream master
-RUN pip install -r requirements.txt
+
+
 # Build
 RUN cd "$service_home" \
     && python setup.py build_ext --inplace -j 4 \
     && python -m pip install -e .
-
 # Load model folder
 WORKDIR $service_home
 RUN mkdir -p models
