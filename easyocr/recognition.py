@@ -10,6 +10,7 @@ import importlib
 from .utils import CTCLabelConverter
 import math
 from deployment_config import DEPLOYEMNT
+import onnx
 
 def custom_mean(x):
     return x.prod()**(2.0/np.sqrt(len(x)))
@@ -109,10 +110,9 @@ def recognizer_predict(model, converter, test_loader, batch_max_length,\
             length_for_pred = torch.IntTensor([batch_max_length] * batch_size).to(device)
             text_for_pred = torch.LongTensor(batch_size, batch_max_length + 1).fill_(0).to(device)
             preds = model(image, text_for_pred)
-            print(vars(model))
             if DEPLOYEMNT['is_deployment']:
                 
-                model_name = f'{model.get_name()}_recognitionModel.onnx'
+                model_name = f'{model.module.name}_recognitionModel.onnx'
                 batch_size_1_1 = 500
                 in_shape_1=[1, 1, 64, batch_size_1_1]
                 dummy_input_1 = torch.rand(in_shape_1)

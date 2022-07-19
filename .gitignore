@@ -113,3 +113,7 @@ ENV/
 *.icloud
 *.pth
 *.yaml
+*.onnx
+*.ttf
+*.json
+*.png
