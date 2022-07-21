@@ -118,3 +118,4 @@ ENV/
 *.json
 *.png
 *.zip
+models/crnn_hippo_300k_bw.py
