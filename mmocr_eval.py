@@ -56,7 +56,7 @@ def count_matches(pred_texts, gt_texts, name_img):
             pred_text = pred_text[0]
         else :
             pred_text = ''
-        if gt_text ==pred_text:
+        if gt_text == pred_text:
             match_res['match_word_num'] += 1
             name_img.pop(0)
         else:
@@ -152,4 +152,4 @@ def eval_ocr_metric(pred_texts, gt_texts, name_img ,metric='acc'):
     return eval_res, false_list
 
 if __name__ == '__main__':
-    eval_ocr_metric([['a'], ['b','x'], ['c']], ['a', 'e', 'c'], ['1', '2', '3'])
+    print(eval_ocr_metric([['a'], ['b','x'], ['c']], ['a', 'e', 'c'], ['1', '2', '3']))
